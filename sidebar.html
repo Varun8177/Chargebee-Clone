@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./sidebar.css">
 </head>
+
 <body>
-    
+    <div id="side-bar">
+        <div id="logo-Section">
+            <img id="logo" src="./images/logo.png" alt="">
+            <div id="details">
+            </div>
+        </div>
+        <input id="search" type="text" placeholder="Go to">
+        <div id="side-bar-tools">
+            <h4>Quick Start Guide</h4>
+            <h4>Home</h4>
+            <h4>Customer</h4>
+            <h4>Subscriptions</h4>
+            <div onclick="invoice()" class="invoice">
+                <h3 id="invoice">Invoices & Credit Notes</h3>
+                <button id="invoice_button">+</button>
+            </div>
+            <div id="invoice_empty"></div>
+
+            <div onclick="catalog()" class="catalog">
+                <h3 id="prod_catalog">Product Catalog</h3>
+                <button id="prod_button">+</button>
+            </div>
+            <div id="prod_empty"></div>
+
+            <div onclick="entitle()" class="entitle">
+                <h3 id="entitle">Entitlements</h3>
+                <button id="entitle_button">+</button>
+            </div>
+            <div id="entitle_empty"></div>
+
+            <div onclick="logs()" class="logs">
+                <h3 id="logs">Logs</h3>
+                <button id="logs_button">+</button>
+            </div>
+            <div id="logs_empty"></div>
+
+            <div onclick="rev()" class="rev">
+                <h3 id="rev">RevenueStory</h3>
+                <button id="rev_button">+</button>
+            </div>
+            <div id="rev_empty"></div>
+            <h4>Classic Reports</h4>
+            <h4>Apps</h4>
+            <div onclick="set()" class="set">
+                <h3 id="set">Settings</h3>
+                <button id="set_button">+</button>
+            </div>
+            <div id="set_empty"></div>
+        </div>
+
+
+    </div>
+    <button id="open-sideBar" onclick="change_size()">
+        < </button>
+            <div id="main"></div>
 </body>
+
 </html>
+<script src="./sidebar.js"></script>
