@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="stylesheet" href="./styles/sidebar.css">
 </head>
 
 <body>
@@ -18,12 +18,12 @@
         </div>
         <input id="search" type="text" placeholder="Go to">
         <div id="side-bar-tools">
-            <h4>Quick Start Guide</h4>
-            <h4>Home</h4>
-            <h4>Customer</h4>
-            <h4>Subscriptions</h4>
+            <h4 id="sidebar_quickguide">Quick Start Guide</h4>
+            <h4 id="sidebar_home" onclick="sidebar_home()">Home</h4>
+            <h4 id="sidebar_customer">Customer</h4>
+            <h4 id="sidebar_subs" onclick="sidebar_subs()">Subscriptions</h4>
             <div onclick="invoice()" class="invoice">
-                <h3 id="invoice">Invoices & Credit Notes</h3>
+                <h3 id="invoice_Credit">Invoices & Credit Notes</h3>
                 <button id="invoice_button">+</button>
             </div>
             <div id="invoice_empty"></div>
@@ -51,8 +51,8 @@
                 <button id="rev_button">+</button>
             </div>
             <div id="rev_empty"></div>
-            <h4>Classic Reports</h4>
-            <h4>Apps</h4>
+            <h4 id="sidebar_report">Classic Reports</h4>
+            <h4 id="sidebar_app">Apps</h4>
             <div onclick="set()" class="set">
                 <h3 id="set">Settings</h3>
                 <button id="set_button">+</button>
@@ -64,8 +64,61 @@
     </div>
     <button id="open-sideBar" onclick="change_size()">
         < </button>
-            <div id="main"></div>
+
+            <div id="main">
+                <div id="sub-main-1">
+                    <iframe width="200" height="125" style="margin-left: 20px;"
+                        src="https://www.youtube.com/embed/QCxXJMhQNZQ">
+                    </iframe>
+                    <div style="margin-left:20px ; ">
+                        <h3>What can Chargify do for you?</h3>
+                        Launch and automate your subscription business with Chargebee’s <br> invoicing, payment
+                        recovery, pricing management, and more. Focus on the growth, <br> and we'll handle the rest.
+                    </div>
+                </div>
+
+                <div id="sub-main-2">
+                    <div style="margin-left:20px ; ">
+                        <h3>Explore Chargebee</h3>
+                        <div style="display: flex;">
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border: 0;">.</button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
+                        </div>
+                        <h3>Give it a try!</h3>
+                        <p>Welcome to your test site. This is a space for you to play <br> around and get an idea of how
+                            Chargebee can work for you.</p>
+                        <p>Interact with the essential elements of Chargebee and see how <br> they come together to make
+                            subscription magic happen. Experiment <br> away, everything is flexible here.</p>
+                        <button onclick="submain2()"
+                            style="background-color: rgb(107, 48, 188);color: white;padding: 5px 10px 5px 10px;border: 0; border-radius: 5px;cursor: pointer;">Lets
+                            Go!</button>
+                    </div>
+                    <img id="imagery" height="400px"
+                        src="https://dgkxwewtzsnml.cloudfront.net/static/app-static-assets/cb-vue/cb-vue-2022.12.15-11.40/images/cb-aha-moment-intro.png"
+                        alt="">
+                </div>
+                <div id="sub-main-3">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div id="buttons_home">
+                    <button id="daily" onclick="daily()" >Daily</button>
+                    <button id="month_3" onclick="month_3()">3 Months</button>
+                    <button id="month_6" onclick="month_6()">6 Months</button>
+                    <button id="month_12" onclick="month_12()">12 Months</button>
+                </div>
+            </div>
 </body>
 
 </html>
-<script src="./sidebar.js"></script>
+<script src="./script/sidebar.js"></script>
