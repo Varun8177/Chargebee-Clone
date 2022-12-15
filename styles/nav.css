@@ -5,7 +5,7 @@
 
 
 #main_nav_tab{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -13,21 +13,21 @@
 
 
 .logo_box {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 10%;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-left: 150px;
+    margin-left: 80px;
 }
 
 .logo_box img{
-    width: 60%;
+    width: 80%;
 }
 
 .navbar_tabs{
-border: 1px soldi black;
+/* border: 1px soldi black; */
 justify-content: space-around;
 
 }
@@ -35,10 +35,10 @@ justify-content: space-around;
 .navbar {
     overflow: hidden;
     background-color: transparent;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     /* border: 1px solid green; */
     /* display: ; */
-    margin-left: -550px;
+    margin-left: -350px;
   }
 
   .navbar a {
@@ -63,7 +63,7 @@ justify-content: space-around;
     font-weight: bold;
     border: none;
     outline: none;
-    color: rgb(11, 11, 11);
+    /* color: rgb(11, 11, 11); */
     padding: 24px 16px;
     background-color: white;
     /* font: inherit; */
@@ -83,7 +83,7 @@ justify-content: space-around;
     display: none;
     position: absolute;
     background-color: white;
-    width: 100%;
+    width: 95%;
     left: 5%;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
@@ -97,23 +97,41 @@ justify-content: space-around;
 
   .column {
     float: left;
-    width: 15%;
+    width: 12%;
     padding: 10px 25px;
     background-color: rgb(255, 255, 255);
     /* height: 250px; */
     /* padding-left: 20px; */
   }
 
+  #column{
+    width: 8%;
+  }
+  #resource{
+    width: 22%;
+    /* padding: 2px 20px 10px 20px; */
+    margin-bottom: 25px;
+  }
+
+  #resource p{
+    margin-bottom: 35px;
+  }
   .column a {
     float: none;
-    color: black; 
-    padding: 16px;
+    /* color: #000ff0;  */
+    padding: 5px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+    /* font-weight: bold; */
   }
-
-  .column a:hover {
+.column a:first-child{
+  font-weight: bold;
+}
+  .column a:not(:first-child):hover {
+    color: #000ff0;
+    /* font-weight: bolder; */
+    margin-left: 3px;
     /* background-color: rgb(112, 23, 23);inner color hover */
   }
 
@@ -126,7 +144,7 @@ justify-content: space-around;
   }
 
   .action-btns{
-    border: 1px solid rgb(0, 189, 28);
+    /* border: 1px solid rgb(0, 189, 28); */
     display: flex;
     margin-right: 150px;
     justify-content: center;
@@ -135,7 +153,9 @@ justify-content: space-around;
   }
 
   .action-btns>button{
-    width: 100px;
+    /* width: 100px; */
+    margin: 0px 5px;
+    /* border:1px solid #000ff0; */
     font-weight: bold;
     
   }
@@ -143,6 +163,8 @@ justify-content: space-around;
   #language ,#login{
     background-color: transparent;
     border: none;
+    /* border:1px solid #000ff0; */
+
   }
 
   #demoBtn{
@@ -153,3 +175,14 @@ justify-content: space-around;
     padding: 5px 10px;
     height: 35px;
   }
+
+  .column>p>a{
+    color: blue;
+  }
+
+  .column a:not(:first-child){
+    color: #000ff0;
+    /* font-weight: bold; */
+  }
+
+  
