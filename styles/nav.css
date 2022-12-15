@@ -83,7 +83,7 @@ justify-content: space-around;
     display: none;
     position: absolute;
     background-color: white;
-    width: 100%;
+    width: 95%;
     left: 5%;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
@@ -119,16 +119,18 @@ justify-content: space-around;
   .column a {
     float: none;
     /* color: #000ff0;  */
-    padding: 16px;
+    padding: 5px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
-
+.column a:first-child{
+  font-weight: bold;
+}
   .column a:not(:first-child):hover {
     color: #000ff0;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     margin-left: 3px;
     /* background-color: rgb(112, 23, 23);inner color hover */
   }
@@ -180,140 +182,7 @@ justify-content: space-around;
 
   .column a:not(:first-child){
     color: #000ff0;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 
-  #border_box{
-    /* border: 1px solid red; */
-    border-radius: 130px;
-    border-top-left-radius: 130px;
-    border-top-right-radius: 130px;
-    border-bottom-right-radius: 130px;
-    border-bottom-left-radius: 130px;
-
-    background: linear-gradient(180deg,rgba(91,1,180,.08) 0,rgba(255,255,255,0) 100%),#fff;
-    min-width: 700px;
-    transform: translateX(-20px) translateY(-140px) rotate(330deg);  
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
-    min-width: 650px;
-    min-height: 350px;
-    box-sizing: border-box;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    width: 40%;
-    height: 470px;
-    display: inline-block;
-    position: absolute;
-    right: -20px;
-    top: -10px;
-    /* bottom: -100px; */
-    content: "";
-    /* background: url(https://webstatic.chargebee.com/assets/web/543/images/home/coc/bg/testimonial-bg.svg) no-repeat; */
-    /* background-image: url(https://webstatic.chargebee.com/assets/web/543/images/home/coc/bg/testimonial-bg.svg); */
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    /* background-repeat-x: no-repeat; */
-    /* background-repeat-y: no-repeat; */
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
-    overflow: visible;
-    display: block;
-    transform: rotate(-30deg);
-    /* border-radius: 26% 19% 26% 26% / 25% 25% 38% 25%; */
-    /* width: 30%; */
-}
-
-.main-headings{
-  /* border: 1px solid red; */
-  width: 100%;
-  height: 500px;
-  display: flex;
-  justify-content: space-around;
-}
-.main_heading_box{
-  /* border: 1px solid black; */
-  width: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.heading_text{
-  /* border: 1px solid green; */
-  width: 80%;
-}
-.heading_text>div:nth-child(2){
-  width: 80%;
-  color: #8282a2;
-}
-.off_img_box{
-  /* border: 1px solid black; */
-  width: 70%;
-  position: relative;
-  top: 110px;
-  right: 10px;
-  left: 28px;
-  /* bottom: 50px; */
-  transform: translateX(-20px) translateY(-140px) rotate(330deg);  
-  border-radius: 130px;
-    border-top-left-radius: 130px;
-    border-top-right-radius: 130px;
-    border-bottom-right-radius: 130px;
-    border-bottom-left-radius: 130px;
-
-}
-
-.off_img_box>img{
   
-  /* border: 1px solid black; */
-  position: relative;
-  top: 10px;
-  left: 0px;
-  right: 10px;
-  mask-image: inherit;
-  mask-border: initial;
-  width: 80%;
-  border-radius: 130px;
-    border-top-left-radius: 130px;
-    border-top-right-radius: 130px;
-    border-bottom-right-radius: 170px;
-    border-bottom-left-radius: 130px;
-  transform: translateX(20px) translateY(10px) rotate(30deg);  
-  mask-clip: content-box;
-  mask-border:unset;
-
-  
-}
-
-#first_head{
-  font-size: 35px;
-  font-weight: bold;
-  /* line-height: 1.5; */
-  /* background-color: #ff7846; */
-}
-
-#demo_btn{
-  border-radius: 20px;
-  font-size: 16px;
-  border: none;
-  height: 45px;
-  width: 130px;
-  padding: 10px 10px;
-  color: white;
-  background: rgb(91, 33, 126);
-background: linear-gradient(180deg, rgb(108, 48, 146) 0%, rgba(122,0,202,1) 37%);
-}
-
-#sign-up-btn{
-  border-radius: 20px;
-  /* border: none; */
-  font-size: 16px;
-margin-left: 15px;
-  height: 45px;
-  width: 150px;
-  padding: 10px 10px;
-}
