@@ -5,10 +5,12 @@
 
 
 #main_nav_tab{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    /* background-color: #000ff0; */
+    /* background-color: transparent; */
 }
 
 
@@ -29,6 +31,9 @@
 .navbar_tabs{
 /* border: 1px soldi black; */
 justify-content: space-around;
+    /* background-color: transparent; */
+    /* background-color: #000ff0; */
+
 
 }
 
@@ -36,12 +41,15 @@ justify-content: space-around;
     overflow: hidden;
     background-color: transparent;
     /* font-family: Arial, Helvetica, sans-serif; */
-    /* border: 1px solid green; */
+    border: 1px solid green;
     /* display: ; */
     margin-left: -350px;
+    /* background-color: #000ff0; */
+
   }
 
   .navbar a {
+
     float: left;
     font-size: 16px;
     color: rgb(26, 24, 24);
@@ -53,11 +61,16 @@ justify-content: space-around;
   .dropdown {
     float: left;
     overflow: hidden;
+    /* background-color: transparent; */
+    /* background-color: #000ff0; */
+
     
   }
 
 
   .dropdown .dropbtn {
+    /* background-color: transparent; */
+    /* background-color: #000ff0; */
 
     font-size: 15px;
     font-weight: bold;
