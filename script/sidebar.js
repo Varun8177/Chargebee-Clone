@@ -318,7 +318,7 @@ function sidebar_subs() {
     <div id="sb_subs_1">
     <h3>All Subscriptions</h3>
     <div>
-     <button>Import Subscriptions</button>
+     <button onclick="edit_empty_user()">Edit Subscriptions</button>
      <button onclick="create_empty_user()" style="background-color:#6200ea;color:white;border:0;">Create Subscriptions</button>
     </div>
     </div>
@@ -328,15 +328,10 @@ function sidebar_subs() {
     <h3>${subs.length} Subscriptions Available</h3>
     <input id="subs_input" oninput="subs_input1()" type="text" placeholder="search for company / name">
     <div>
-    <select name="filter" onchange="subs_select()" id="sub_filter">
-      <option value="filter">Filter</option>
-      <option value="customerInfo">Customer Info</option>
-    <option value="name">name</option>
-    </select>
-    <select name="Sort" id="sub_sort">
+    <select name="Sort" id="sub_sort" onchange="sort_subs()">
     <option value="Sort">Sort</option>
-    <option value="A-Z">company A-Z</option>
-  <option value="Z-A">company Z-A</option>
+    <option value="L-H">MRP Low - High</option>
+  <option value="H-L">MRP High - Low</option>
   </select>
     </div>
     </div>
@@ -377,7 +372,7 @@ function sidebar_subs() {
         butt.style.backgroundColor="rgb(242, 54, 24)"
         butt.style.border="0"
         butt.style.color="white"
-       
+        butt.style.cursor="pointer"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -480,7 +475,7 @@ function sidebar_home() {
 function subs_input1() {
     let val = document.querySelector("#subs_input").value
     let inp = subs.filter((elem, i) => {
-        return elem.SubscriptionInfo.includes(val)
+        return  elem.CustomerInfo.toLowerCase().includes(val.toLowerCase())
     })
     document.querySelector("#sb_subs_3").innerHTML = ` <div>
     
@@ -498,24 +493,25 @@ function subs_input1() {
         let div = document.createElement("div")
 
         let p1 = document.createElement("p")
-        p1.innerText = subs[i].SubscriptionInfo
+        p1.innerText = inp[i].SubscriptionInfo
         let p2 = document.createElement("p")
-        p2.innerText = subs[i].CustomerInfo
+        p2.innerText = inp[i].CustomerInfo
         let p3 = document.createElement("p")
-        p3.innerText = subs[i].NextRenewal
+        p3.innerText = inp[i].NextRenewal
         let p4 = document.createElement("p")
-        p4.innerText = subs[i].MRP
+        p4.innerText = inp[i].MRP
         let p5 = document.createElement("p")
-        p5.innerText = subs[i].Createdon
+        p5.innerText = inp[i].Createdon
         let p6 = document.createElement("p")
-        p6.innerText = subs[i].id
+        p6.innerText = inp[i].id
         let butt = document.createElement("button")
         butt.innerText = "CANCEL"
         butt.style.display = "block"
-        butt.style.marginTop = "12px"
+        butt.style.marginTop = "17px"
         butt.style.backgroundColor="rgb(242, 54, 24)"
         butt.style.border="0"
         butt.style.color="white"
+        butt.style.cursor="pointer"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -580,6 +576,38 @@ function create_empty_user() {
     `
 }
 
+function edit_empty_user(){
+    document.querySelector("#create_empty_user").style.height = "400px"
+    document.querySelector("#create_empty_user").style.paddingLeft = "30px"
+    document.querySelector("#create_empty_user").style.paddingTop= "10px";
+    document.querySelector("#create_empty_user").style.paddingBottom= "30px";
+    document.querySelector("#create_empty_user").innerHTML = `
+    <button onclick="closing()">&#9747;</button>
+    <div id="emp_user1">
+      <div id="emp_h4">
+      <h4>UID :</h4> 
+      <h4>Subscription :</h4>
+      <h4>Name :</h4>
+      <h4>Renewal :</h4> 
+      <h4>MRP :</h4> 
+     </div>
+     
+     <div id="emp_input">
+     <input id="uid" placeholder="UID" style="height:20px; align-self:center" type="text">
+     <select name="filter" style="height:20px;margin-top:38px" id="sub_name">
+       <option value="Monthly INR Yearly">Monthly INR Yearly</option>
+       <option value="Yearly INR Yearly">Yearly INR Yearly</option>
+       <option value="Annual INR Yearly">Annual INR Yearly</option>
+           </select> 
+         <input id="user_name" placeholder="Company Name" style="height:20px; align-self:center" type="text"> 
+          <input id="ren" placeholder="Renewal month" style="height:20px; align-self:center" type="text"> 
+         <input id="user_mrp" placeholder="Price" style="height:20px; align-self:center" type="text"> 
+     
+        <button onclick="edit_user()">EDIT</button>
+        </div>
+   </div>
+    `
+}
 function closing() {
     document.querySelector("#create_empty_user").style.height = "0"
     document.querySelector("#create_empty_user").style.paddingTop= "0";
@@ -598,7 +626,7 @@ function new_user() {
     let NextRenewal = document.querySelector("#ren").value;
     let MRP = document.querySelector("#user_mrp").value+" INR";
     console.log(SubscriptionInfo)
-    if (NextRenewal == "" && SubscriptionInfo == "" && CustomerInfo == "" && MRP == "") {
+    if (NextRenewal == "" || SubscriptionInfo == "" || CustomerInfo == "" || MRP == "") {
         alert("Please Fill details to create a new user")
         return
     }
@@ -622,9 +650,196 @@ function new_user() {
 
     fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/", requestOptions)
         .then(response => response.json())
-        .then(subs => {
+        .then(data => {
             alert("New subscription created")
             location.reload()
         })
         .catch(error => alert("Something went wrong"));
+}
+
+function edit_user(){
+    let obj={}
+    
+    let myUID = document.querySelector("#uid").value;
+    let CustomerInfo = document.querySelector("#user_name").value;
+    let NextRenewal = document.querySelector("#ren").value;
+    let MRP = document.querySelector("#user_mrp").value
+if(CustomerInfo!==""){
+  obj["CustomerInfo"]=CustomerInfo
+}
+if(NextRenewal!==""){
+    obj["NextRenewal"]=NextRenewal
+}
+if(MRP!==""){
+    obj["MRP"]=MRP+" INR";
+}
+if(myUID===""){
+    alert("Please Enter UID to make Changes")
+    return
+}
+console.log(obj)
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify(obj);
+
+var requestOptions = {
+  method: 'PUT',
+  headers: myHeaders,
+  body: raw
+};
+
+fetch(`https://639ad06531877e43d6773285.mockapi.io/Subs/${myUID}`, requestOptions)
+  .then(response => response.json())
+  .then(data => {
+    alert("Subscription Edited")
+    location.reload()
+})
+.catch(error => alert("Bad request"));
+}
+
+function sort_subs(){
+    let x=document.querySelector("#sub_sort").value
+   if(x=="L-H"){
+    let lth=subs.sort((a,b)=>{
+        return parseInt(a.MRP)-parseInt(b.MRP)
+    })
+    document.querySelector("#sb_subs_3").innerHTML = ` <div>
+    
+    <div id="subs_info"><h4>Subscription Info</h4></div>
+    <div id="cus_info"><h4>Customer Info</h4></div>  
+    <div id="next_ren"><h4>Next Renewal</h4></div>
+    <div id="mrp"><h4>MRP</h4></div>
+    <div id="createon"><h4>Created On</h4></div>
+    <div id="uid"><h4>UID</h4></div>
+    <div id="cancel"><h4>CANCEL</h4></div>
+     
+     </div>
+    `
+    for (let i = 0; i < lth.length; i++) {
+        let div = document.createElement("div")
+
+        let p1 = document.createElement("p")
+        p1.innerText = lth[i].SubscriptionInfo
+        let p2 = document.createElement("p")
+        p2.innerText = lth[i].CustomerInfo
+        let p3 = document.createElement("p")
+        p3.innerText = lth[i].NextRenewal
+        let p4 = document.createElement("p")
+        p4.innerText = lth[i].MRP
+        let p5 = document.createElement("p")
+        p5.innerText = lth[i].Createdon
+        let p6 = document.createElement("p")
+        p6.innerText = lth[i].id
+        let butt = document.createElement("button")
+        butt.innerText = "CANCEL"
+        butt.style.display = "block"
+        butt.style.marginTop = "17px"
+        butt.style.backgroundColor="rgb(242, 54, 24)"
+        butt.style.border="0"
+        butt.style.color="white"
+        butt.style.cursor="pointer"
+        butt.addEventListener("click", function () {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            
+            var requestOptions = {
+                method: 'DELETE',
+                headers: myHeaders,
+               
+            };
+
+            fetch(`https://639ad06531877e43d6773285.mockapi.io/Subs/${p6.innerText}`, requestOptions)
+                .then(response => response.json())
+                .then(result =>{  alert("subscription Cancelled")
+                location.reload()
+                console.log(result)
+                })
+                .catch(error => console.log('error', error));
+        })
+
+        document.querySelector("#subs_info").append(p1)
+        document.querySelector("#cus_info").append(p2)
+        document.querySelector("#next_ren").append(p3)
+        document.querySelector("#mrp").append(p4)
+        document.querySelector("#createon").append(p5)
+        document.querySelector("#uid").append(p6)
+        document.querySelector("#cancel").append(butt)
+    }
+   return
+   }
+   console.log(x)
+   if(x=="H-L"){
+    let htl=subs.sort((a,b)=>{
+        return parseInt(b.MRP)-parseInt(a.MRP)
+    })
+    console.log(x)
+    document.querySelector("#sb_subs_3").innerHTML = ` <div>
+    
+    <div id="subs_info"><h4>Subscription Info</h4></div>
+    <div id="cus_info"><h4>Customer Info</h4></div>  
+    <div id="next_ren"><h4>Next Renewal</h4></div>
+    <div id="mrp"><h4>MRP</h4></div>
+    <div id="createon"><h4>Created On</h4></div>
+    <div id="uid"><h4>UID</h4></div>
+    <div id="cancel"><h4>CANCEL</h4></div>
+     
+     </div>
+    `
+    for (let i = 0; i < htl.length; i++) {
+        let div = document.createElement("div")
+
+        let p1 = document.createElement("p")
+        p1.innerText = htl[i].SubscriptionInfo
+        let p2 = document.createElement("p")
+        p2.innerText = htl[i].CustomerInfo
+        let p3 = document.createElement("p")
+        p3.innerText = htl[i].NextRenewal
+        let p4 = document.createElement("p")
+        p4.innerText = htl[i].MRP
+        let p5 = document.createElement("p")
+        p5.innerText = htl[i].Createdon
+        let p6 = document.createElement("p")
+        p6.innerText = htl[i].id
+        let butt = document.createElement("button")
+        butt.innerText = "CANCEL"
+        butt.style.display = "block"
+        butt.style.marginTop = "17px"
+        butt.style.backgroundColor="rgb(242, 54, 24)"
+        butt.style.border="0"
+        butt.style.color="white"
+        butt.style.cursor="pointer"
+        butt.addEventListener("click", function () {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            
+            var requestOptions = {
+                method: 'DELETE',
+                headers: myHeaders,
+               
+            };
+
+            fetch(`https://639ad06531877e43d6773285.mockapi.io/Subs/${p6.innerText}`, requestOptions)
+                .then(response => response.json())
+                .then(result =>{  alert("subscription Cancelled")
+                location.reload()
+                console.log(result)
+                })
+                .catch(error => console.log('error', error));
+        })
+
+        document.querySelector("#subs_info").append(p1)
+        document.querySelector("#cus_info").append(p2)
+        document.querySelector("#next_ren").append(p3)
+        document.querySelector("#mrp").append(p4)
+        document.querySelector("#createon").append(p5)
+        document.querySelector("#uid").append(p6)
+        document.querySelector("#cancel").append(butt)
+    }
+    return
+    // console.log(inp)
+   }
+
+
+   
 }

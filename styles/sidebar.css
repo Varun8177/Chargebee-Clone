@@ -365,6 +365,7 @@ body {
     margin-top: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     /* padding-bottom: 10px; */
+    /* border: 2px solid red; */
 }
 #create_empty_user>button{
     margin-left: 90%;
