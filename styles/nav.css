@@ -9,6 +9,8 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    /* background-color: #000ff0; */
+    /* background-color: transparent; */
 }
 
 
@@ -20,15 +22,19 @@
     justify-content: center;
     align-items: center;
     margin-left: 80px;
+    margin-right: 20px;
 }
 
 .logo_box img{
-    width: 80%;
+    width: 60%;
 }
 
 .navbar_tabs{
 /* border: 1px soldi black; */
 justify-content: space-around;
+    /* background-color: transparent; */
+    /* background-color: #000ff0; */
+
 
 }
 
@@ -39,9 +45,12 @@ justify-content: space-around;
     /* border: 1px solid green; */
     /* display: ; */
     margin-left: -350px;
+    /* background-color: #000ff0; */
+
   }
 
   .navbar a {
+
     float: left;
     font-size: 16px;
     color: rgb(26, 24, 24);
@@ -53,11 +62,16 @@ justify-content: space-around;
   .dropdown {
     float: left;
     overflow: hidden;
+    /* background-color: transparent; */
+    /* background-color: #000ff0; */
+
     
   }
 
 
   .dropdown .dropbtn {
+    background-color: transparent;
+    /* background-color: #000ff0; */
 
     font-size: 15px;
     font-weight: bold;
@@ -65,7 +79,7 @@ justify-content: space-around;
     outline: none;
     /* color: rgb(11, 11, 11); */
     padding: 24px 16px;
-    background-color: white;
+    /* background-color: white; */
     /* font: inherit; */
     margin: 0;
     /* border: 1px solid red; */
@@ -83,8 +97,8 @@ justify-content: space-around;
     display: none;
     position: absolute;
     background-color: white;
-    width: 95%;
-    left: 5%;
+    width: 100%;
+    left: 0%;
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
   }
