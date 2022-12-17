@@ -364,8 +364,8 @@ body {
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* padding-bottom: 10px; */
-    /* border: 2px solid red; */
+    background-color: rgb(44, 0, 105);
+    color: white;
 }
 #create_empty_user>button{
     margin-left: 90%;
@@ -375,6 +375,14 @@ body {
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+#create_empty_user>button:hover{
+    height: 30px;
+    width: 40px;
+    background-color: #8e50e4;
+}
+#emp_input>button:hover{
+    background-color: #8e50e4;
 }
 #emp_user1{
     display: grid;
@@ -396,6 +404,11 @@ body {
 #emp_input>input{
     margin-top: 33px;
     width: 500px;
+    padding-left: 20px;
+    border-radius: 3px;
+}
+#emp_input>select{
+    padding-left: 20px;
 }
 @media all and (min-width:0px) and (max-width:1000px) {
     #sub-main-1 {
@@ -425,6 +438,10 @@ body {
     #sb_subs_2 {
         display: block;
         height: 150px;
+    }
+    #emp_input>input{
+        margin-top: 33px;
+        width: 100%;
     }
 
 }
