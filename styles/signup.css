@@ -57,7 +57,7 @@ td:first-child {
   gap: 300px;
   margin-bottom: 40px;
 }
-#sign_head > div > img {
+#sign_head > div > a> img {
   height: 40px;
 }
 #styleTextArea {
