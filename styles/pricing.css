@@ -139,3 +139,103 @@ background-color: transparent;
     font-size: 16px;
     font-size: 500;
 }
+
+
+/* price card section */
+#back-box-price{
+    /* border: 1px solid black; */
+    /* height: 1000px; */
+    background-color: #f8f8f8;
+    /* margin-top: 100px; */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+#price-card-section{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 70px;
+    /* margin-top: 100px; */
+}
+.price-card{
+    /* border: 1px solid black; */
+    padding-right: 15px;
+
+}
+.curr-typr{
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+.price-box{
+    font-size: 36px;
+    font-weight: 500;
+margin-bottom: 10px;
+
+}
+.pay-type{
+    font-size: 16px;
+    font-weight: 600;
+margin-bottom: 10px;
+
+}
+.price-dec{
+    font-size: 14px;
+margin-bottom: 20px;
+
+}
+.get-started-btn{
+    font-size: 14px;
+    margin-top: 20px;
+    background-color:#4300a3;
+    color: #fff;
+    font-size: 16px;
+    /* font-weight: 500; */
+    height: 45px;
+    padding: 5px 20px;
+    border-radius: 4px;
+    border: none;
+    width: 210px;
+
+}
+.tik-box-head{
+    font-weight: 600;
+    font-size: 16px;
+
+}
+.tik-box{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+}
+.tik-box p{
+    font-size: 14px;
+
+}
+.tik-box>div{
+    /* border: 1px solid red; */
+    width: 5%;
+    margin-right: 5px;
+
+}
+.tik-box img{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-right: 5px;
+}
+
+.plan-com-btn{
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+font-size: 20px;
+font-weight: 600;
+color: #0026e6;
+
+}
