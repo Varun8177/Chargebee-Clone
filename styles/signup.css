@@ -1,0 +1,20 @@
+
+
+.container {
+    width: 100%;
+  }
+  .swiper {
+    width: 100%;
+    height: fit-content;
+  }
+  .swiper-slide img {
+    width: 100%;
+  }
+  .swiper{
+    color: rgb(104, 95, 95);
+  }
+  .swiper .swiper-pagination-bullet-active {
+    /* margin-top: 200px; */
+    border-radius: 0px;
+    background:  #ff7846;
+  }

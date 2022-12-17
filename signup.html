@@ -1,12 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/signup.css" />
+    <style>
+        *{
+            background-color: white;
+        }
+      #signslideshow {
+        height: auto;
+        width: auto;
+        display: flex;
+        gap: 20px;
+      }
+      #signslideshow > div {
+        height: 580px;
+        width: 425px;
+        border: 1px solid black;
+      }
+      #signslideshow > div + div {
+        border: 1px solid red;
+        width: 920px;
+      }
+      .input-wrapper {
+        margin-top: 20px;
+        margin-left: 20%;
+        position: relative;
+      }
+
+      input {
+        border: 1px solid gray;
+        border-radius: 6px;
+        position: relative;
+        width: 600px;
+        margin: 10px;
+        line-height: 6ex;
+        height: 550px;
+      }
+
+      label {
+        position: absolute;
+        top: 0.2ex;
+        z-index: 1;
+        left: 2em;
+        background-color: white;
+        padding: 0 5px;
+      }
+    </style>
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div id="signslideshow">
+      <div>
+        <!-- ------------------sidebar---------------------------------------------------------------- -->
+        <div class="container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/signlogo1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/signlogo2.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/signlogo3.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- <div class="header display_flex">
+          <div>
+            <img
+              class="logo"
+              src="https://www.chargebee.com/static/resources/brand/chargebee-logo-black.svg"
+            />
+          </div>
+
+          <div class="login_demo display_flex">
+            <div class="display_flex schedule schedule_orange">
+              <p class="demo"><a href>Schedule a Demo ></a></p>
+              <i class="fi-rr-angle-small-right demo"></i>
+            </div>
+            <div class="display_flex">
+              <div><i class="fi-sr-lock"></i></div>
+              <div><a href>Login ></a></div>
+              <div><i class="fi-rr-angle-small-right"></i></div>
+            </div>
+          </div>
+        </div> -->
+        <div class="input-wrapper">
+          <label for="first">Create Your Sandbox Account</label>
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    loop: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

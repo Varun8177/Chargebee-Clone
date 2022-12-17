@@ -22,11 +22,14 @@
   font-style: italic;
   color: #646468;
 }
-.rightnav > p > a{
-    margin-left: 3px;
-    color: #202022!important;
-    font-weight: 600;
-    text-decoration: none;
+.rightnav > p > a {
+  margin-left: 3px;
+  color: #202022 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+.rightnav > p > a :hover{
+  color: #ff7846;
 }
 #img_1 {
   width: 150px;
@@ -159,7 +162,7 @@
   margin-bottom: 12px;
 }
 .p6 {
-    margin-top: 20px;
+  margin-top: 20px;
   font-size: 15px;
   color: gray;
   text-align: center;
@@ -219,6 +222,6 @@ h2 span {
   color: #b4b4be;
   font-size: 13px;
 }
-fa-arrow-right{
-    size: 1px;
+fa-arrow-right {
+  size: 1px;
 }
