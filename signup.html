@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/signup.css" />
     <title> Sign Up - Get Your Free Sandbox Chargebee</title>
+    <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -134,6 +135,7 @@
     console.log(UserListData);
     userArr.push(UserListData);
     localStorage.setItem("userData", JSON.stringify(userArr));
+    alert("Signup sucessfull!!")
     window.location.href = "login.html";
   });
 </script>
