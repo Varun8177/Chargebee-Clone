@@ -5,51 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/signup.css" />
-    <style>
-        *{
-            background-color: white;
-        }
-      #signslideshow {
-        height: auto;
-        width: auto;
-        display: flex;
-        gap: 20px;
-      }
-      #signslideshow > div {
-        height: 580px;
-        width: 425px;
-        border: 1px solid black;
-      }
-      #signslideshow > div + div {
-        border: 1px solid red;
-        width: 920px;
-      }
-      .input-wrapper {
-        margin-top: 20px;
-        margin-left: 20%;
-        position: relative;
-      }
-
-      input {
-        border: 1px solid gray;
-        border-radius: 6px;
-        position: relative;
-        width: 600px;
-        margin: 10px;
-        line-height: 6ex;
-        height: 550px;
-      }
-
-      label {
-        position: absolute;
-        top: 0.2ex;
-        z-index: 1;
-        left: 2em;
-        background-color: white;
-        padding: 0 5px;
-      }
-    </style>
-    <title>Document</title>
+    <title> Sign Up - Get Your Free Sandbox Chargebee</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -77,32 +33,64 @@
         </div>
       </div>
       <div>
-        <!-- <div class="header display_flex">
+        <div id="sign_head">
           <div>
             <img
               class="logo"
               src="https://www.chargebee.com/static/resources/brand/chargebee-logo-black.svg"
             />
           </div>
-
-          <div class="login_demo display_flex">
-            <div class="display_flex schedule schedule_orange">
-              <p class="demo"><a href>Schedule a Demo ></a></p>
-              <i class="fi-rr-angle-small-right demo"></i>
-            </div>
-            <div class="display_flex">
-              <div><i class="fi-sr-lock"></i></div>
-              <div><a href>Login ></a></div>
-              <div><i class="fi-rr-angle-small-right"></i></div>
-            </div>
+          <div>
+            <a href="./login.html"
+              >Login <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
-        </div> -->
-        <div class="input-wrapper">
-          <label for="first">Create Your Sandbox Account</label>
-          <input type="text" />
+        </div>
+        <div id="div">
+          <form action="/action_page.php">
+            <label id="companyNmae" for="fname">Work email</label>
+            <input
+              type="text"
+              id="email"
+              type="email"
+              placeholder="(eg)john.m@company.com"
+            />
+            <br />
+            <label id="companyNmae" for="lname">Phone number</label>
+            <input
+              type="text"
+              id="phone"
+              type="number"
+              placeholder="81234 56789"
+            />
+            <br /><br />
+            <p>
+              <input type="checkbox" required />I accept the Terms and
+              Conditions
+            </p>
+            <br />
+            <input type="submit" value="Complete Signup " />
+            <br />
+            <p>
+              By clicking on Complete Signup, you agree to our Terms and you
+              acknowledge having read our Privacy Notice
+            </p>
+            <br />
+            <p>
+              *This includes periodic newsletters, emails about usage tips,
+              billing practices, and other communications. You can opt out
+              anytime within the app.
+            </p>
+            <br />
+          </form>
         </div>
       </div>
     </div>
+    <img
+      id="bottomImagesign"
+      src="https://webstatic.chargebee.com/assets/web/543/images/signup/customers/chargebee-customers.svg"
+      alt=""
+    />
   </body>
 </html>
 
@@ -125,5 +113,27 @@
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+  });
+</script>
+<script
+  src="https://kit.fontawesome.com/9723985197.js"
+  crossorigin="anonymous"
+></script>
+<script>
+  var form = document.querySelector("form");
+  var userArr = JSON.parse(localStorage.getItem("userData")) || [];
+  // localStorage.clear();
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var UserListData = {
+      email: form.email.value,
+      phone: form.phone.value,
+    };
+    console.log(UserListData);
+    userArr.push(UserListData);
+    localStorage.setItem("userData", JSON.stringify(userArr));
+    window.location.href = "login.html";
   });
 </script>

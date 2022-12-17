@@ -18,7 +18,7 @@
         <div class="rightnav">
           <p>
             Don't have an account?
-            <a href="" >Sign up <i class="fa-solid fa-arrow-right"></i
+            <a href="./signup.html" >Sign up <i class="fa-solid fa-arrow-right"></i
             ></a>
           </p>
         </div>
@@ -60,12 +60,14 @@
               <input
                 type="text"
                 class="input"
+                id="email"
                 placeholder=" name@company.com"
               /><br /><br />
               <label for="passord"></label>
               <input
                 type="password"
                 class="input"
+                id="password"
                 placeholder=" password"
               /><br /><br />
 
@@ -98,4 +100,37 @@
   src="https://kit.fontawesome.com/9723985197.js"
   crossorigin="anonymous"
 ></script>
+<script>
+  var form = document.querySelector('form');
+    var userArr = JSON.parse(localStorage.getItem('userData'));
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var ListOfdata = {
+            email: form.email.value,
+            password: form.password.value
+        }
+        checkData(ListOfdata);
+        console.log(ListOfdata);
+    })
+
+    function checkData(data) {
+        var flag = false;
+
+        userArr.forEach(function(el) {
+            if((el.email==data.email) && (el.password==data.phone)) {
+                flag = true;
+            }
+        })
+
+        if(flag) {
+            alert("login successful");
+            window.location.href = "index.html"
+        }else {
+            alert("login failed");
+        }
+    }
+</script>
+</script>
 //Nirupama
