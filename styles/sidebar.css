@@ -4,7 +4,6 @@ body {
 }
 
 #side-bar {
-
     width: 300px;
     background-color: white;
     border-top-left-radius: 10px;
@@ -13,6 +12,7 @@ body {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+
 }
 
 #open-sideBar {
@@ -23,6 +23,7 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
+
 }
 
 #main {
@@ -36,7 +37,7 @@ body {
     margin-left: 10px;
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(44, 0, 105);
+    background-color: #2c0069;
     width: 100%;
     border-radius: 10px;
 }
@@ -61,7 +62,7 @@ body {
 }
 
 #select_butt {
-    background-color: rgb(5, 209, 5);
+    background-color: #0ab450;
     color: white;
     padding: 5px 10px 5px 5px;
     border: 0;
@@ -81,20 +82,28 @@ body {
     border: 1px solid rgb(176, 176, 176)
 }
 
+#side-bar-tools {
+    /* border: 2px solid red; */
+    margin-top: 30px;
+}
+
 .set:hover,
 .invoice:hover,
 .catalog:hover,
 .entitle:hover,
 .logs:hover,
 .rev:hover,
-#sidebar_quickguide:hover,
-#sidebar_home:hover,
-#sidebar_customer:hover,
-#sidebar_subs:hover,
-#sidebar_report:hover,
-#sidebar_app:hover {
-    border: 2px solid black;
+.sidebar_quickguide:hover,
+.sidebar_home:hover,
+.sidebar_customer:hover,
+.sidebar_subs:hover,
+.sidebar_report:hover,
+.sidebar_app:hover {
+    background-color: rgb(226, 233, 249);
     cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding-left: 10px;
 }
 
 .invoice,
@@ -102,12 +111,19 @@ body {
 .entitle,
 .logs,
 .rev,
-.set {
+.set,
+.sidebar_quickguide,
+.sidebar_home,
+.sidebar_customer,
+.sidebar_subs,
+.sidebar_report,
+.sidebar_app {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
     margin-top: -20px;
     font-size: 13px;
+    margin-bottom: 10px;
 }
 
 #invoice_button,
@@ -121,7 +137,6 @@ body {
     border: 0px solid black;
     width: 50px;
     font-size: 20px;
-    background-color: white;
     cursor: pointer;
 }
 
@@ -221,7 +236,7 @@ body {
 
 #sub-main-3 {
     margin-top: 20px;
-    height: 100px;
+    height: 120px;
     background-color: rgb(44, 0, 105);
     width: 98%;
     border-radius: 10px;
@@ -233,8 +248,14 @@ body {
 }
 
 #sub-main-3>div {
-
+     padding-left: 10px;
     background-color: rgb(61, 43, 106);
+}
+#sub-main-3>div>h2{
+    color: white;
+}
+#sub-main-3>div>h4{
+    color: rgb(206, 206, 206);
 }
 
 #buttons_home>button {
@@ -289,6 +310,9 @@ body {
 }
 
 #sb_subs_2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     height: 50px;
     background-color: white;
     border-radius: 10px;
@@ -340,7 +364,7 @@ body {
 }
 
 #sb_subs_3 {
-   /* border: 2px solid red; */
+    /* border: 2px solid red; */
     background-color: white;
     border-radius: 10px;
     padding-left: 30px;
@@ -350,7 +374,7 @@ body {
     margin-top: 20px;
     display: grid;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    
+
 }
 
 #sb_subs_3>div {
@@ -359,15 +383,16 @@ body {
     /* border: 2px solid black; */
 }
 
-#create_empty_user{
+#create_empty_user {
     background-color: white;
     border-radius: 10px;
     margin-top: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /* padding-bottom: 10px; */
-    /* border: 2px solid red; */
+    background-color: rgb(44, 0, 105);
+    color: white;
 }
-#create_empty_user>button{
+
+#create_empty_user>button {
     margin-left: 90%;
     border: 0;
     background-color: #6200ea;
@@ -376,15 +401,28 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
-#emp_user1{
+
+#create_empty_user>button:hover {
+    height: 30px;
+    width: 40px;
+    background-color: #8e50e4;
+}
+
+#emp_input>button:hover {
+    background-color: #8e50e4;
+}
+
+#emp_user1 {
     display: grid;
-    grid-template-columns: repeat(2,150px);
+    grid-template-columns: repeat(2, 150px);
     grid-auto-rows: auto;
 }
-#emp_h4>h4{
+
+#emp_h4>h4 {
     margin-top: 40px;
 }
-#emp_input>button{
+
+#emp_input>button {
     background-color: #6200ea;
     border: 0;
     color: white;
@@ -393,10 +431,146 @@ body {
     cursor: pointer;
     margin-top: 10px;
 }
-#emp_input>input{
+
+#emp_input>input {
     margin-top: 33px;
     width: 500px;
+    padding-left: 20px;
+    border-radius: 3px;
 }
+
+#emp_input>select {
+    padding-left: 20px;
+}
+
+.get_start_div {
+    background-color: rgb(167, 139, 250);
+    height: 100px;
+    padding: 20px 0 10px 0;
+}
+
+.checklist {
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    cursor: pointer;
+}
+
+#first,
+#second,
+#third,
+#fourth {
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    color: rgb(89, 89, 89);
+}
+
+.checklist>button {
+    margin-top: 15px;
+    margin-left: 5%;
+    font-size: 25px;
+    border: 0;
+    background-color: white;
+}
+
+#first>h4,
+#second>h4,
+#third>h4,
+#fourth>h4 {
+    margin-left: 10%;
+}
+
+#first>h4>input,
+#second>h4>input,
+#third>h4>input,
+#fourth>h4>input {
+    margin-right: 3%;
+}
+
+.checklist>h3 {
+    margin-left: 20px;
+}
+
+.checklist-1 {
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px 0 20px 0;
+}
+
+#bottom:hover {
+    cursor: pointer;
+    background-color: rgb(226, 233, 249);
+}
+
+#app-1 {
+    height: 64px;
+    background-color: white;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#app-1>button {
+    height: 40px;
+    width: 190px;
+    margin-top: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: 0;
+}
+
+#app-2 {
+    display: flex;
+    height: 247px;
+    background-color: white;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+/* s */
+#app-2>div>h1 {
+    width: 540px;
+    margin-left: 10%;
+
+}
+
+#app-2>div>button {
+    width: 237px;
+    height: 48px;
+    margin-left: 10%;
+    background-color: #6200ea;
+    color: white;
+    border: 0;
+}
+
+#app-2>div>p {
+    margin-left: 10%;
+}
+
+#log_out{
+    border-radius: 10px;
+    background-color: rgb(107, 48, 188);
+    margin-right: 5px;
+    border: 0;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+
 @media all and (min-width:0px) and (max-width:1000px) {
     #sub-main-1 {
         display: block;
@@ -425,6 +599,15 @@ body {
     #sb_subs_2 {
         display: block;
         height: 150px;
+    }
+
+    #emp_input>input {
+        margin-top: 33px;
+        width: 100%;
+    }
+    #sub-main-3{
+        grid-template-columns: repeat(2,1fr);
+        height: fit-content;
     }
 
 }

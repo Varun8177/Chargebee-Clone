@@ -63,7 +63,7 @@
             <p>This will be displayed on invites to your Chargebee account, email <br> notifications, etc.</p>
             <input type="text" id="name" placeholder="example" required>
             <h3>Set password</h3>
-            <input oninput="pass()" type="text" id="pass" placeholder="Example@gmail.com" required>
+            <input type="text" id="pass" placeholder="Example@gmail.com" required>
             <h3>Minimum requirements</h3>
             <li>8 characters long</li>
             <li>1 letter</li>
@@ -79,25 +79,13 @@
 
 </html>
 <script>
-    function pass() {
-        let x = document.querySelector("#pass").value
-        let name=document.querySelector("#name").value
-        let cn=document.querySelector("#comp_name").value
-        let obj={
-            "company_name":x,
-            "name":name,
-            "pass":x
-        }
-        if (x.includes(1) || x.includes(2) || x.includes(3) || x.includes(4) || x.includes(5) || x.includes(6) || x.includes(7) || x.includes(8) || x.includes(9) || x.includes(10)) {
-            localStorage.setItem("Company Details",JSON.stringify(obj))
-        }
-    }
+   
     function next_page(){
         let x = document.querySelector("#pass").value
         let name=document.querySelector("#name").value
         let cn=document.querySelector("#comp_name").value
         let obj={
-            "company_name":x,
+            "company_name":cn,
             "name":name,
             "pass":x
         }
