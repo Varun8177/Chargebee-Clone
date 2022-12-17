@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalize your experience</title>
+    <style>
+        body{
+            background-color: white
+        }
+        .logo>img {
+            height: 50px;
+        }
+        #main{
+            margin-left: 10%;
+          
+        }
+        #main>h1{
+            font-size: 50px;
+        }
+        #main>h3{
+            font-style: italic;
+        }
+        #main-2{
+            /* border: 2px solid red; */
+            margin-left: 10%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 100px;
+            gap: 20px;
+            width: 80%;
+        }
+        #main-2>div{
+            border: 1px solid rgb(195, 195, 195);
+            background-color: rgb(215, 215, 215);  
+            border-radius: 10px;  
+            text-align: center;       
+        }
+        #main-2>div>h2{
+            margin-top: 30px;
+        }
+        #main-2>div:hover{
+            border: 2px solid rgb(98, 0, 234);
+            cursor: pointer;
+        }
+        #back:hover{
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        #back{
+            border: 1px solid rgb(195, 195, 195);
+            background-color: rgb(215, 215, 215);  
+            border-radius: 10px;  
+            text-align: center; 
+            margin-left: 10%;
+            width: 120px;  
+            height: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #back>h2{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="/images/chargify_logo.png" alt="">
+    </div>
+    <div id="main">
+        <h1>personalize your experience</h1>
+        <img src="/images/pers.png" alt="">
+        <h3>2 /4. What is the size of your company?</h3>
+    </div>
+   
+    <div id="main-2">
+        <div onclick="next_page()">
+            <h2>1-10 Employees</h2>
+        </div>
+        <div onclick="next_page()">
+            <h2>11-50 Employees</h2>
+        </div>
+        <div onclick="next_page()">
+            <h2>51-500 Employees</h2>
+        </div>
+        <div onclick="next_page()">
+            <h2>500+ Employees</h2>
+        </div>
+       
+    </div>
+    <div id="back" onclick="prev()">
+        <h2>Back</h2>
+    </div>
+</body>
+</html>
+<script>
+    function next_page(){
+        window.location="personal3.html"
+    }
+    function prev(){
+        window.location="personal1.html"
+    }
+</script>
