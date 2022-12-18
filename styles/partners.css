@@ -5,7 +5,7 @@
 #partners{
     height: 300px;
     width: 100%;
-    border: 1px solid red;
+    border: 1px solid transparent;
     margin: auto;
     text-align: center;
     background-color: rgb(31, 31, 138);
