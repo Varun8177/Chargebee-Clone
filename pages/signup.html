@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/signup.css" />
+  <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png">
+  <title>Sign UP - Get Your Free Sandbox - Chargebee</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="signslideshow">
+    <div>
+      <!-- ------------------sidebar---------------------------------------------------------------- -->
+      <div class="container">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../images/signlogo1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/signlogo2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../images/signlogo3.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div id="sign_head">
+        <div>
+          <a href="../index.html">
+            <img class="logo" src="/images/chargify transparent logo.png" />
+          </a>
+
+        </div>
+        <div>
+          <a href="../pages/login.html">Login <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div id="borderstyle">
+        <h1 id="borderstyletetx">Create Your Sandbox Account</h1>
+        <div id="div">
+          <form action="/action_page.php">
+            <label id="companyNmae" for="fname">Work email</label><br /><br />
+            <input type="text" id="email" type="email" placeholder="(eg)john.m@company.com" />
+            <br />
+            <label id="companyNmae" for="lname">Phone number</label><br /><br />
+            <input type="text" id="phone" type="number" placeholder="81234 56789" />
+            <br /><br />
+            <p id="styelOfocheckbox">
+              <input type="checkbox" required />
+              <label for="c1">I want to be notified about the awesome happenings* at
+                Chargebee</label>
+            </p>
+            <br />
+            <input type="submit" value="Complete Signup " />
+            <br />
+            <p id="para1signa">
+              By clicking on Complete Signup, you agree to our <span id="spancolor">Terms</span> and you
+              acknowledge having read our <span id="spancolor">Privacy Notice</span>
+            </p>
+            <br />
+            <p id="para1signa2">
+              *This includes periodic newsletters, emails about usage tips,
+              billing practices, and other communications. You can opt out
+              anytime within the app.
+            </p>
+            <br />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img id="bottomImagesign"
+    src="https://webstatic.chargebee.com/assets/web/543/images/signup/customers/chargebee-customers.svg" alt="" />
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".swiper", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    loop: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<script src="https://kit.fontawesome.com/9723985197.js" crossorigin="anonymous"></script>
+<script>
+  var form = document.querySelector("form");
+  // localStorage.clear();
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    var UserListData = {
+      email: form.email.value,
+      phone: form.phone.value,
+    };
+    console.log(UserListData);
+    // userArr.push(UserListData);
+    localStorage.setItem("Company Details", JSON.stringify(UserListData));
+    window.location.href = "../pages/Acc_SetUp.html";
+  });
+</script>
