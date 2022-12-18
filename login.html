@@ -1,26 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/login.css" />
+    <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png">
     <title>User Login - Chargebee</title>
   </head>
   <body>
     <div class="box1">
       <div>
-        <a href
+        <a href="./index.html"
           ><img
             id="img_1"
             src="https://d2jxbtsa1l6d79.cloudfront.net/static/app-static-assets/core/core-2.1.7/images/brand/cn-logotype-black.svg"
         /></a>
         <div class="rightnav">
-          <p>Don't have an account? <a href="">Sing up 
-           &nbsp; <i class="fa-solid fa-arrow-right"></i></a></p>
+          <p>
+            Don't have an account?
+            <a href="./signup.html" >Sign up <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </p>
         </div>
       </div>
-
       <div class="box2">
         <div class="box2_1">
           <img
@@ -29,8 +33,9 @@
           />
           <div>
             <p id="p1">ANNOUNCING SUMMER 2022 PRODUCT RELEASE</p>
-            <p id="p2"><a>Monetize Effectively
-                to Tackle Market Turbulence</a></p>
+            <p id="p2">
+              <a>Monetize Effectively to Tackle Market Turbulence</a>
+            </p>
           </div>
           <div class="img3_1">
             <img
@@ -39,7 +44,10 @@
               align="left"
             />
             <p class="para1">
-                Chargebee's Summer 2022 Release brings you better monetization capabilities that help you seize revenue opportunities by improving customer lifetime value, managing cashflows better, and achieving topline growth.
+              Chargebee's Summer 2022 Release brings you better monetization
+              capabilities that help you seize revenue opportunities by
+              improving customer lifetime value, managing cashflows better, and
+              achieving topline growth.
             </p>
           </div>
           <p class="para2">See what's new across our products -></p>
@@ -54,24 +62,27 @@
               <input
                 type="text"
                 class="input"
+                id="email"
                 placeholder=" name@company.com"
               /><br /><br />
               <label for="passord"></label>
               <input
                 type="password"
                 class="input"
+                id="password"
                 placeholder=" password"
               /><br /><br />
-              
-              <input class="signup" type="submit" value="Submit">
+
+              <input class="signup" type="submit" value="Submit" />
               <p class="forpass">Forgot password?</p>
             </form>
             <h2><span>or</span></h2>
             <div>
-                
               <button class="btn">
-                <img id="img6" src="./Log-Sign-Img/g_logo.png" align="left" />
-                <p ><a href><div class="p7">Sign in with Google</div></a></p>
+                <img id="img6" src="./images/g_logo.png" align="left" />
+                <p>
+                  <a href><div class="p7">Sign in with Google</div></a>
+                </p>
               </button>
               <p class="btn2"><a href>Sign in with single sign-On</a></p>
             </div>
@@ -87,5 +98,41 @@
     </div>
   </body>
 </html>
-<script src="https://kit.fontawesome.com/9723985197.js" crossorigin="anonymous"></script>
+<script
+  src="https://kit.fontawesome.com/9723985197.js"
+  crossorigin="anonymous"
+></script>
+<script>
+  var form = document.querySelector('form');
+    var userArr = JSON.parse(localStorage.getItem('userData'));
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var ListOfdata = {
+            email: form.email.value,
+            password: form.password.value
+        }
+        checkData(ListOfdata);
+        console.log(ListOfdata);
+    })
+
+    function checkData(data) {
+        var flag = false;
+
+        userArr.forEach(function(el) {
+            if((el.email==data.email) && (el.password==data.phone)) {
+                flag = true;
+            }
+        })
+
+        if(flag) {
+            alert("login successful");
+            window.location.href = "index.html"
+        }else {
+            alert("login failed");
+        }
+    }
+</script>
+</script>
 //Nirupama
