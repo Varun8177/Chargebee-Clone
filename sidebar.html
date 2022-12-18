@@ -16,60 +16,60 @@
             <div id="details">
             </div>
         </div>
-        <input id="search" type="text" placeholder="Go to">
+        <input id="search" type="text" placeholder="Go to" oninput="sidebar_search()" onemptied="sidebar_home()">
         <div id="side-bar-tools">
             <div class="sidebar_quickguide" onclick="get_started()">
-                <h3>Quick Start Guide</h3>
+                <p>Quick Start Guide</p>
             </div>
             <div class="sidebar_home" onclick="sidebar_home()">
-                <h3>Home</h3>
+                <p>Home</p>
             </div>
             <div class="sidebar_customer" onclick="sidebar_customer()">
-                <h3>Customer</h3>
+                <p>Customer</p>
             </div>
             <div class="sidebar_subs" onclick="sidebar_subs()">
-                <h3>Subscriptions</h3>
+                <p>Subscriptions</p>
             </div>
 
 
             <div onclick="invoice()" class="invoice">
-                <h3 id="invoice_Credit">Invoices & Credit Notes</h3>
-                <h3 id="invoice_button">+</h3>
+                <p id="invoice_Credit">Invoices & Credit Notes</p>
+                <p id="invoice_button">+</p>
             </div>
             <div id="invoice_empty"></div>
 
             <div onclick="catalog()" class="catalog">
-                <h3 id="prod_catalog">Product Catalog</h3>
-                <h3 id="prod_button">+</h3>
+                <p id="prod_catalog">Product Catalog</p>
+                <p id="prod_button">+</p>
             </div>
             <div id="prod_empty"></div>
 
             <div onclick="entitle()" class="entitle">
-                <h3 id="entitle">Entitlements</h3>
-                <h3 id="entitle_button">+</h3>
+                <p id="entitle">Entitlements</p>
+                <p id="entitle_button">+</p>
             </div>
             <div id="entitle_empty"></div>
 
             <div onclick="logs()" class="logs">
-                <h3 id="logs">Logs</h3>
-                <h3 id="logs_button">+</h3>
+                <p id="logs">Logs</p>
+                <p id="logs_button">+</p>
             </div>
             <div id="logs_empty"></div>
 
             <div onclick="rev()" class="rev">
-                <h3 id="rev">RevenueStory</h3>
-                <h3 id="rev_button">+</h3>
+                <p id="rev">RevenueStory</p>
+                <p id="rev_button">+</p>
             </div>
             <div id="rev_empty"></div>
             <div class="sidebar_report">
-                <h3>Classic Reports</h3>
+                <p>Classic Reports</p>
             </div>
             <div class="sidebar_app" onclick="myapp()">
-                <h3>Apps</h3>
+                <p>Apps</p>
             </div>
 
             <div onclick="set()" class="set">
-                <h3 id="set">Settings</h3>
+                <p id="set">Settings</p>
             </div>
 
             <button id="log_out" onclick="logout()">Log out</button>
@@ -87,15 +87,15 @@
                     </iframe>
                     <div style="margin-left:20px ; ">
                         <h3>What can Chargify do for you?</h3>
-                        Launch and automate your subscription business with Chargebee’s <br> invoicing, payment
-                        recovery, pricing management, and more. Focus on the growth, <br> and we'll handle the rest.
+                        <p>Launch and automate your subscription business with Chargify <br> invoicing, payment
+                            recovery, pricing management, and more. Focus on the growth, <br> and we'll handle the rest.</p>
                     </div>
                 </div>
                 
 
                 <div id="sub-main-2">
                     <div style="margin-left:20px ; ">
-                        <h3>Explore Chargebee</h3>
+                        <h3>Explore Chargify</h3>
                         <div style="display: flex;">
                             <button
                                 style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
@@ -110,8 +110,8 @@
                         </div>
                         <h3>Give it a try!</h3>
                         <p>Welcome to your test site. This is a space for you to play <br> around and get an idea of how
-                            Chargebee can work for you.</p>
-                        <p>Interact with the essential elements of Chargebee and see how <br> they come together to make
+                            Chargify can work for you.</p>
+                        <p>Interact with the essential elements of Chargify and see how <br> they come together to make
                             subscription magic happen. Experiment <br> away, everything is flexible here.</p>
                         <button onclick="submain2()"
                             style="background-color: rgb(107, 48, 188);color: white;padding: 5px 10px 5px 10px;border: 0; border-radius: 5px;cursor: pointer;">Lets
