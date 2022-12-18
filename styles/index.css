@@ -25,15 +25,10 @@
     position: absolute;
     right: 80px;
     top: -10px;
-    /* bottom: -100px; */
     content: "";
-    /* background: url(https://webstatic.chargebee.com/assets/web/543/images/home/coc/bg/testimonial-bg.svg) no-repeat; */
-    /* background-image: url(https://webstatic.chargebee.com/assets/web/543/images/home/coc/bg/testimonial-bg.svg); */
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
-    /* background-repeat-x: no-repeat; */
-    /* background-repeat-y: no-repeat; */
     background-attachment: initial;
     background-origin: initial;
     background-clip: initial;
@@ -41,8 +36,6 @@
     overflow: visible;
     display: block;
     transform: rotate(-30deg);
-    /* border-radius: 26% 19% 26% 26% / 25% 25% 38% 25%; */
-    /* width: 30%; */
 }
 
 .main-headings{
@@ -119,8 +112,9 @@
   font-size: 16px;
   border: none;
   height: 45px;
-  width: 130px;
-  padding: 10px 10px;
+  font-weight: 500;
+  /* width: 130px; */
+  padding: 10px 15px;
   color: white;
   background: rgb(91, 33, 126);
 background: linear-gradient(180deg, rgb(108, 48, 146) 0%, rgba(122,0,202,1) 37%);
@@ -130,10 +124,11 @@ background: linear-gradient(180deg, rgb(108, 48, 146) 0%, rgba(122,0,202,1) 37%)
   border-radius: 20px;
   /* border: none; */
   font-size: 16px;
-margin-left: 15px;
+ margin-left: 15px;
   height: 45px;
-  width: 150px;
-  padding: 10px 10px;
+  font-weight: 500;
+  /* width: 150px; */
+  padding: 10px 15px;
 }
 
 
