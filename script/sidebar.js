@@ -43,65 +43,65 @@ function change_size() {
     }
 
     if (side_butt.innerText == ">") {
-        
+
         document.querySelector("#details").innerHTML = `
-                                                          <p id="name">AB_company</p>
-                                                          <p id="email">${email}</p>
-                                                          <button id="select_butt">select plan &#8594;</button>
+        <p id="name">${n}</p>
+        <p id="email">${com}</p>
+        <button id="select_butt">select plan &#8594;</button>
                                                                                          `
         document.querySelector("#side-bar-tools").innerHTML = `
         <div class="sidebar_quickguide" onclick="get_started()">
-        <h3 >Quick Start Guide</h3>
+        <p >Quick Start Guide</p>
     </div>
     <div class="sidebar_home" onclick="sidebar_home()">
-        <h3>Home</h3>
+        <p>Home</p>
     </div>
     <div class="sidebar_customer" onclick="sidebar_customer()">
-        <h3>Customer</h3>
+        <p>Customer</p>
     </div>
     <div class="sidebar_subs" onclick="sidebar_subs()">
-        <h3 >Subscriptions</h3>
+        <p >Subscriptions</p>
     </div>
     
     
     <div onclick="invoice()" class="invoice">
-        <h3 id="invoice_Credit">Invoices & Credit Notes</h3>
-        <h3 id="invoice_button">+</h3>
+        <p id="invoice_Credit">Invoices & Credit Notes</p>
+        <p id="invoice_button">+</p>
     </div>
     <div id="invoice_empty"></div>
 
     <div onclick="catalog()" class="catalog">
-        <h3 id="prod_catalog">Product Catalog</h3>
-        <h3 id="prod_button">+</h3>
+        <p id="prod_catalog">Product Catalog</p>
+        <p id="prod_button">+</p>
     </div>
     <div id="prod_empty"></div>
 
     <div onclick="entitle()" class="entitle">
-        <h3 id="entitle">Entitlements</h3>
-        <h3 id="entitle_button">+</h3>
+        <p id="entitle">Entitlements</p>
+        <p id="entitle_button">+</p>
     </div>
     <div id="entitle_empty"></div>
 
     <div onclick="logs()" class="logs">
-        <h3 id="logs">Logs</h3>
-        <h3 id="logs_button">+</h3>
+        <p id="logs">Logs</p>
+        <p id="logs_button">+</p>
     </div>
     <div id="logs_empty"></div>
 
     <div onclick="rev()" class="rev">
-        <h3 id="rev">RevenueStory</h3>
-        <h3 id="rev_button">+</h3>
+        <p id="rev">RevenueStory</p>
+        <p id="rev_button">+</p>
     </div>
     <div id="rev_empty"></div>
     <div class="sidebar_report">
-        <h3 >Classic Reports</h3>
+        <p >Classic Reports</p>
     </div>
     <div class="sidebar_app" onclick="myapp()">
-        <h3 >Apps</h3>
+        <p >Apps</p>
     </div>
     
     <div onclick="set()" class="set">
-        <h3 id="set">Settings</h3>
+        <p id="set">Settings</p>
     </div>
  <button id="log_out" onclick="logout()">Log out</button>
     
@@ -113,7 +113,7 @@ function change_size() {
         side_butt.style.color = "black"
         document.querySelector("#side-bar").style.backgroundColor = "white"
         document.querySelector("#side-bar").style.width = "300px"
-        side_butt.style.color="grey"
+        side_butt.style.color = "grey"
         side_butt.innerText = "<"
         return
     }
@@ -249,7 +249,7 @@ function set() {
 function month_3() {
     let x = document.querySelector("#month_3")
     x.style.backgroundColor = "rgb(44, 0, 105)"
-    x.style.color="white"
+    x.style.color = "white"
     document.querySelector("#month_6").style.backgroundColor = "white"
     document.querySelector("#month_6").style.color = "grey"
     document.querySelector("#month_12").style.backgroundColor = "white"
@@ -270,7 +270,7 @@ function month_3() {
 function month_6() {
     let x = document.querySelector("#month_6")
     x.style.backgroundColor = "rgb(44, 0, 105)"
-    x.style.color="white"
+    x.style.color = "white"
     document.querySelector("#month_3").style.backgroundColor = "white"
     document.querySelector("#month_3").style.color = "grey"
     document.querySelector("#month_12").style.color = "grey"
@@ -291,7 +291,7 @@ function month_6() {
 function month_12() {
     let x = document.querySelector("#month_12")
     x.style.backgroundColor = "rgb(44, 0, 105)"
-    x.style.color="white"
+    x.style.color = "white"
     document.querySelector("#month_3").style.backgroundColor = "white"
     document.querySelector("#month_3").style.color = "grey"
     document.querySelector("#month_6").style.color = "grey"
@@ -313,7 +313,7 @@ function month_12() {
 function daily() {
     let x = document.querySelector("#daily")
     x.style.backgroundColor = "rgb(44, 0, 105)"
-    x.style.color="white"
+    x.style.color = "white"
     document.querySelector("#month_3").style.backgroundColor = "white"
     document.querySelector("#month_3").style.color = "grey"
     document.querySelector("#month_6").style.color = "grey"
@@ -396,13 +396,13 @@ function sidebar_subs() {
         let butt = document.createElement("button")
         butt.innerText = "X"
         butt.style.display = "block"
-        butt.style.marginTop = "17px"
+        butt.style.marginTop = "15px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
-        butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -554,13 +554,13 @@ function subs_input1() {
         let butt = document.createElement("button")
         butt.innerText = "X"
         butt.style.display = "block"
-        butt.style.marginTop = "17px"
+        butt.style.marginTop = "15px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
-        butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -597,7 +597,7 @@ function subs_input1() {
 
 
 function create_empty_user() {
-    document.querySelector("#create_empty_user").style.height = "300px"
+    document.querySelector("#create_empty_user").style.height = "320px"
     document.querySelector("#create_empty_user").style.paddingLeft = "30px"
     document.querySelector("#create_empty_user").style.paddingTop = "10px";
     document.querySelector("#create_empty_user").style.paddingBottom = "30px";
@@ -611,7 +611,7 @@ function create_empty_user() {
       <h4>MRP :</h4> 
      </div>
      
-     <div id="emp_input"> <select name="filter" style="height:20px;margin-top:38px" id="sub_name">
+     <div id="emp_input"> <select name="filter" id="sub_name">
        <option value="Monthly INR Yearly">Monthly INR Yearly</option>
        <option value="Yearly INR Yearly">Yearly INR Yearly</option>
        <option value="Annual INR Yearly">Annual INR Yearly</option>
@@ -634,22 +634,22 @@ function edit_empty_user() {
     document.querySelector("#create_empty_user").innerHTML = `
     <button onclick="closing()">&#9747;</button>
     <div id="emp_user1">
-      <div id="emp_h4">
-      <h4>UID :</h4> 
-      <h4>Subscription :</h4>
-      <h4>Name :</h4>
-      <h4>Renewal :</h4> 
-      <h4>MRP :</h4> 
+      <div id="emp_h4" >
+      <h4 style="margin-top: 43px;">UID :</h4> 
+      <h4 style="margin-top: 43px;">Subscription :</h4>
+      <h4 style="margin-top: 43px;">Name :</h4>
+      <h4 style="margin-top: 43px;">Renewal :</h4> 
+      <h4 style="margin-top: 43px;">MRP :</h4> 
      </div>
      
      <div id="emp_input">
-     <input id="uid" placeholder="UID" style="height:20px; align-self:center" type="text">
-     <select name="filter" style="height:20px;margin-top:38px" id="sub_name">
+     <input id="uid" placeholder="UID" style="height:20px; align-self:center;" type="text">
+     <select name="filter" style="height:30px;margin-top:42px" id="sub_name">
        <option value="Monthly INR Yearly">Monthly INR Yearly</option>
        <option value="Yearly INR Yearly">Yearly INR Yearly</option>
        <option value="Annual INR Yearly">Annual INR Yearly</option>
            </select> 
-         <input id="user_name" placeholder="Company Name" style="height:20px; align-self:center" type="text"> 
+         <input id="user_name" placeholder="Company Name" style="height:20px; align-self:center " type="text"> 
           <input id="ren" placeholder="Renewal month" style="height:20px; align-self:center" type="text"> 
          <input id="user_mrp" placeholder="Price" style="height:20px; align-self:center" type="text"> 
      
@@ -784,13 +784,13 @@ function sort_subs() {
             let butt = document.createElement("button")
             butt.innerText = "X"
             butt.style.display = "block"
-            butt.style.marginTop = "17px"
+            butt.style.marginTop = "15px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -862,8 +862,8 @@ function sort_subs() {
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -956,13 +956,13 @@ function sidebar_customer() {
         let butt = document.createElement("button")
         butt.innerText = "X"
         butt.style.display = "block"
-        butt.style.marginTop = "17px"
+        butt.style.marginTop = "15px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
-       butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -1026,13 +1026,13 @@ function customer_input1() {
         let butt = document.createElement("button")
         butt.innerText = "X"
         butt.style.display = "block"
-        butt.style.marginTop = "17px"
+        butt.style.marginTop = "15px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
-        butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -1099,13 +1099,13 @@ function sort_customers() {
             let butt = document.createElement("button")
             butt.innerText = "X"
             butt.style.display = "block"
-            butt.style.marginTop = "17px"
+            butt.style.marginTop = "15px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -1175,8 +1175,8 @@ function sort_customers() {
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -1225,23 +1225,23 @@ function get_started() {
 
     <div class="checklist" onclick="open_first()">
     <button id="first_button">+</button>
-    <h3>Set up your products & pricing </h3>
+    <p>Set up your products & pricing </p>
     </div>
     <div id="first"></div>
     <div class="checklist" onclick="open_sec()">
     <button id="sec_button">+</button>
-    <h3>Integrate Chargebee with your website 
-    </h3>
+    <p>Integrate Chargebee with your website 
+    </p>
     </div>
     <div id="second"></div>
     <div class="checklist" onclick="open_third()">
     <button id="third_button">+</button>
-    <h3>Streamline billing operation</h3>
+    <p>Streamline billing operation</p>
     </div>
     <div id="third"></div>
     <div class="checklist" onclick="open_fourth()">
     <button id="fourth_button">+</button>
-    <h3>Start charging customers</h3>
+    <p>Start charging customers</p>
     </div>
     <div id="fourth"></div>
     </div>
@@ -1431,8 +1431,8 @@ function cred_Notes() {
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
-        butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
         document.querySelector("#subs_info").append(p1)
         document.querySelector("#cus_info").append(p2)
         document.querySelector("#next_ren").append(p3)
@@ -1487,8 +1487,8 @@ function sort_credit() {
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-            butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1541,8 +1541,8 @@ function sort_credit() {
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-            butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1666,8 +1666,8 @@ function inv_Notes() {
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
-        butt.style.borderRadius="5px"
-        butt.style.marginLeft="20px"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
         document.querySelector("#subs_info").append(p1)
         document.querySelector("#cus_info").append(p2)
         document.querySelector("#next_ren").append(p3)
@@ -1703,13 +1703,13 @@ function sort_inv() {
             p1.innerText = lth[i].SubscriptionInfo
             p1.style.border = "2px solid orange"
             p1.style.backgroundColor = "rgb(255, 117, 24)"
-    
-    
+
+
             if (p1.innerText == "Paid") {
                 p1.style.border = "1px solid rgb(150, 212, 138)"
                 p1.style.backgroundColor = "rgb(177, 250, 162)"
             }
-    
+
             p1.style.borderRadius = "5px"
             let p2 = document.createElement("p")
             p2.innerText = lth[i].CustomerInfo
@@ -1729,8 +1729,8 @@ function sort_inv() {
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-            butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1766,13 +1766,13 @@ function sort_inv() {
             p1.innerText = htl[i].SubscriptionInfo
             p1.style.border = "2px solid orange"
             p1.style.backgroundColor = "rgb(255, 117, 24)"
-    
-    
+
+
             if (p1.innerText == "Paid") {
                 p1.style.border = "1px solid rgb(150, 212, 138)"
                 p1.style.backgroundColor = "rgb(177, 250, 162)"
             }
-    
+
             p1.style.borderRadius = "5px"
             let p2 = document.createElement("p")
             p2.innerText = htl[i].CustomerInfo
@@ -1792,8 +1792,8 @@ function sort_inv() {
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-            butt.style.borderRadius="5px"
-            butt.style.marginLeft="20px"
+            butt.style.borderRadius = "5px"
+            butt.style.marginLeft = "20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1831,6 +1831,87 @@ function myapp() {
         `
 }
 
-function logout(){
-    window.location="login.html"
+function logout() {
+    window.location = "login.html"
 }
+
+function sidebar_search() {
+
+    let val = document.querySelector("#search").value
+    if (val = "") {
+        sidebar_home()
+        return
+    }
+    let inp = subs.filter((elem, i) => {
+        return elem.CustomerInfo.toLowerCase().includes(val.toLowerCase())
+    })
+    // document.querySelector("#main>div").style.display="flex"
+    // document.querySelector("#main>div").style.justifyContent="space-between"
+    document.querySelector("#main").innerHTML = ` 
+    <div style="display:flex;background-color:white;justify-content: space-between;padding:10px 10px 10px 10px">
+    <div id="subs_info" style="margin-left:20px" ><h4>Subscription Info</h4></div>
+    <div id="cus_info"><h4>Customer Info</h4></div>  
+    <div id="next_ren"><h4>Next Renewal</h4></div>
+    <div id="mrp"><h4>MRP</h4></div>
+    <div id="createon"><h4>Created On</h4></div>
+    <div id="uid"><h4>UID</h4></div>
+    <div id="cancel" style="margin-right:20px"><h4>CANCEL</h4></div>
+     
+     </div>
+    `
+    for (let i = 0; i < inp.length; i++) {
+        let div = document.createElement("div")
+
+        let p1 = document.createElement("p")
+        p1.innerText = inp[i].SubscriptionInfo
+        let p2 = document.createElement("p")
+        p2.innerText = inp[i].CustomerInfo
+        let p3 = document.createElement("p")
+        p3.innerText = inp[i].NextRenewal
+        let p4 = document.createElement("p")
+        p4.innerText = inp[i].MRP
+        let p5 = document.createElement("p")
+        p5.innerText = inp[i].Createdon
+        let p6 = document.createElement("p")
+        p6.innerText = inp[i].id
+        let butt = document.createElement("button")
+        butt.innerText = "X"
+        butt.style.display = "block"
+        butt.style.marginTop = "15px"
+        butt.style.backgroundColor = "rgb(242, 54, 24)"
+        butt.style.border = "0"
+        butt.style.color = "white"
+        butt.style.cursor = "pointer"
+        butt.style.borderRadius = "5px"
+        butt.style.marginLeft = "20px"
+        butt.addEventListener("click", function () {
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var requestOptions = {
+                method: 'DELETE',
+                headers: myHeaders,
+
+            };
+
+            fetch(`https://639ad06531877e43d6773285.mockapi.io/Subs/${p6.innerText}`, requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    alert("subscription Cancelled")
+                    location.reload()
+                    console.log(result)
+                })
+                .catch(error => console.log('error', error));
+        })
+
+        document.querySelector("#subs_info").append(p1)
+        document.querySelector("#cus_info").append(p2)
+        document.querySelector("#next_ren").append(p3)
+        document.querySelector("#mrp").append(p4)
+        document.querySelector("#createon").append(p5)
+        document.querySelector("#uid").append(p6)
+        document.querySelector("#cancel").append(butt)
+    }
+
+}
+
