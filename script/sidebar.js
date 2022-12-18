@@ -33,7 +33,7 @@ function change_size() {
         `
         document.querySelector("#details").innerHTML = null
         document.querySelector("#logo").style.height = "50px"
-        document.querySelector("#logo").style.marginLeft = "20px"
+        document.querySelector("#logo").style.marginLeft = "15px"
         document.querySelector("#side-bar").style.backgroundColor = "rgb(44,0,105)"
         side_butt.style.backgroundColor = "rgb(44,0,105)"
         side_butt.style.color = "white"
@@ -43,6 +43,7 @@ function change_size() {
     }
 
     if (side_butt.innerText == ">") {
+        
         document.querySelector("#details").innerHTML = `
                                                           <p id="name">AB_company</p>
                                                           <p id="email">${email}</p>
@@ -101,15 +102,18 @@ function change_size() {
     
     <div onclick="set()" class="set">
         <h3 id="set">Settings</h3>
-       
     </div>
- 
+ <button id="log_out" onclick="logout()">Log out</button>
     
         `
+        document.querySelector("#logo").style.height = "70px"
+        document.querySelector("#logo").style.marginLeft = "5px"
+        document.querySelector("#logo").style.marginTop = "15px"
         side_butt.style.backgroundColor = "white"
         side_butt.style.color = "black"
         document.querySelector("#side-bar").style.backgroundColor = "white"
         document.querySelector("#side-bar").style.width = "300px"
+        side_butt.style.color="grey"
         side_butt.innerText = "<"
         return
     }
@@ -245,6 +249,7 @@ function set() {
 function month_3() {
     let x = document.querySelector("#month_3")
     x.style.backgroundColor = "rgb(44, 0, 105)"
+    x.style.color="white"
     document.querySelector("#month_6").style.backgroundColor = "white"
     document.querySelector("#month_6").style.color = "grey"
     document.querySelector("#month_12").style.backgroundColor = "white"
@@ -265,6 +270,7 @@ function month_3() {
 function month_6() {
     let x = document.querySelector("#month_6")
     x.style.backgroundColor = "rgb(44, 0, 105)"
+    x.style.color="white"
     document.querySelector("#month_3").style.backgroundColor = "white"
     document.querySelector("#month_3").style.color = "grey"
     document.querySelector("#month_12").style.color = "grey"
@@ -285,6 +291,7 @@ function month_6() {
 function month_12() {
     let x = document.querySelector("#month_12")
     x.style.backgroundColor = "rgb(44, 0, 105)"
+    x.style.color="white"
     document.querySelector("#month_3").style.backgroundColor = "white"
     document.querySelector("#month_3").style.color = "grey"
     document.querySelector("#month_6").style.color = "grey"
@@ -306,6 +313,7 @@ function month_12() {
 function daily() {
     let x = document.querySelector("#daily")
     x.style.backgroundColor = "rgb(44, 0, 105)"
+    x.style.color="white"
     document.querySelector("#month_3").style.backgroundColor = "white"
     document.querySelector("#month_3").style.color = "grey"
     document.querySelector("#month_6").style.color = "grey"
@@ -386,13 +394,15 @@ function sidebar_subs() {
         let p6 = document.createElement("p")
         p6.innerText = subs[i].id
         let butt = document.createElement("button")
-        butt.innerText = "CANCEL"
+        butt.innerText = "X"
         butt.style.display = "block"
         butt.style.marginTop = "17px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
+        butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -427,7 +437,7 @@ function sidebar_home() {
     document.querySelector("#main").innerHTML = `
     <div id="sub-main-1">
         <iframe width="200" height="125" style="margin-left: 20px;"
-            src="https://www.youtube.com/embed/QCxXJMhQNZQ">
+            src="https://www.youtube.com/embed/u83QbjCb_JY">
         </iframe>
 
         <div style="margin-left:20px ; ">
@@ -441,17 +451,17 @@ function sidebar_home() {
         <div style="margin-left:20px ; ">
             <h3>Explore Chargebee</h3>
             <div style="display: flex;">
-                <button
-                    style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border: 0;">.</button>
-                <button
-                    style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
-                <button
-                    style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
-                <button
-                    style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
-                <button
-                    style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border: 0">.</button>
-            </div>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+                            <button
+                                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+                        </div>
             <h3>Give it a try!</h3>
             <p>Welcome to your test site. This is a space for you to play <br> around and get an idea of how
                 Chargebee can work for you.</p>
@@ -482,6 +492,10 @@ function sidebar_home() {
     <h4>Net Payments</h4>
     <h2>Rs.194,800</h2>
  </div>
+ <div>
+ <h4>Unpaid Invoices</h4>
+ <h2>Rs.2,340</h2>
+</div>
     </div>
     <div id="buttons_home">
         <button id="daily" onclick="daily()" >Daily</button>
@@ -538,13 +552,15 @@ function subs_input1() {
         let p6 = document.createElement("p")
         p6.innerText = inp[i].id
         let butt = document.createElement("button")
-        butt.innerText = "CANCEL"
+        butt.innerText = "X"
         butt.style.display = "block"
         butt.style.marginTop = "17px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
+        butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -766,13 +782,15 @@ function sort_subs() {
             let p6 = document.createElement("p")
             p6.innerText = lth[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
+            butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -837,13 +855,15 @@ function sort_subs() {
             let p6 = document.createElement("p")
             p6.innerText = htl[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
+            butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -934,13 +954,15 @@ function sidebar_customer() {
         let p6 = document.createElement("p")
         p6.innerText = subs[i].id
         let butt = document.createElement("button")
-        butt.innerText = "CANCEL"
+        butt.innerText = "X"
         butt.style.display = "block"
         butt.style.marginTop = "17px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
+       butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -1002,13 +1024,15 @@ function customer_input1() {
         let p6 = document.createElement("p")
         p6.innerText = inp[i].id
         let butt = document.createElement("button")
-        butt.innerText = "CANCEL"
+        butt.innerText = "X"
         butt.style.display = "block"
         butt.style.marginTop = "17px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
+        butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
         butt.addEventListener("click", function () {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
@@ -1073,13 +1097,15 @@ function sort_customers() {
             let p6 = document.createElement("p")
             p6.innerText = lth[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
+            butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -1142,13 +1168,15 @@ function sort_customers() {
             let p6 = document.createElement("p")
             p6.innerText = htl[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
+            butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
             butt.addEventListener("click", function () {
                 var myHeaders = new Headers();
                 myHeaders.append("Content-Type", "application/json");
@@ -1396,13 +1424,15 @@ function cred_Notes() {
         let p6 = document.createElement("p")
         p6.innerText = creditNotes[i].id
         let butt = document.createElement("button")
-        butt.innerText = "CANCEL"
+        butt.innerText = "X"
         butt.style.display = "block"
         butt.style.marginTop = "17px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
+        butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
         document.querySelector("#subs_info").append(p1)
         document.querySelector("#cus_info").append(p2)
         document.querySelector("#next_ren").append(p3)
@@ -1450,14 +1480,15 @@ function sort_credit() {
             let p6 = document.createElement("p")
             p6.innerText = lth[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-
+            butt.style.borderRadius="5px"
+            butt.style.marginLeft="20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1503,14 +1534,15 @@ function sort_credit() {
             let p6 = document.createElement("p")
             p6.innerText = htl[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-
+            butt.style.borderRadius="5px"
+            butt.style.marginLeft="20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1627,13 +1659,15 @@ function inv_Notes() {
         let p6 = document.createElement("p")
         p6.innerText = invNotes[i].id
         let butt = document.createElement("button")
-        butt.innerText = "CANCEL"
+        butt.innerText = "X"
         butt.style.display = "block"
         butt.style.marginTop = "17px"
         butt.style.backgroundColor = "rgb(242, 54, 24)"
         butt.style.border = "0"
         butt.style.color = "white"
         butt.style.cursor = "pointer"
+        butt.style.borderRadius="5px"
+        butt.style.marginLeft="20px"
         document.querySelector("#subs_info").append(p1)
         document.querySelector("#cus_info").append(p2)
         document.querySelector("#next_ren").append(p3)
@@ -1688,14 +1722,15 @@ function sort_inv() {
             let p6 = document.createElement("p")
             p6.innerText = lth[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-
+            butt.style.borderRadius="5px"
+            butt.style.marginLeft="20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1750,14 +1785,15 @@ function sort_inv() {
             let p6 = document.createElement("p")
             p6.innerText = htl[i].id
             let butt = document.createElement("button")
-            butt.innerText = "CANCEL"
+            butt.innerText = "X"
             butt.style.display = "block"
             butt.style.marginTop = "17px"
             butt.style.backgroundColor = "rgb(242, 54, 24)"
             butt.style.border = "0"
             butt.style.color = "white"
             butt.style.cursor = "pointer"
-
+            butt.style.borderRadius="5px"
+            butt.style.marginLeft="20px"
             document.querySelector("#subs_info").append(p1)
             document.querySelector("#cus_info").append(p2)
             document.querySelector("#next_ren").append(p3)
@@ -1793,4 +1829,8 @@ function myapp() {
         <p>You haven't installed any apps yet. Please visit Marketplace  to explore apps that complete your business workflows!</p>
         </div>
         `
+}
+
+function logout(){
+    window.location="login.html"
 }
