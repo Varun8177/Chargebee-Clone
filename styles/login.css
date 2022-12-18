@@ -32,8 +32,8 @@
   color: #ff7846;
 }
 #img_1 {
-  width: 150px;
-  height: 30px;
+  width: 120px;
+  /* height: 40px; */
   margin-left: 20px;
   margin-top: 20px;
 }
@@ -56,9 +56,9 @@
   margin: 2%;
 }
 #img2_1 {
-  width: 30px;
-  height: 30px;
-  background-color: #6200ea;
+  width: 60px;
+  height: 60px;
+  /* background-color: #6200ea; */
   border-radius: 30%;
   margin-left: 20px;
   margin-top: 20px;

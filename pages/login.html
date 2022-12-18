@@ -6,15 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles/login.css" />
-  <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png">
-  <title>User Login - Chargebee</title>
+  <!-- <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png"> -->
+  <title>User Login - Chargify</title>
 </head>
 
 <body>
   <div class="box1">
     <div>
-      <a href="../index.html"><img id="img_1"
-          src="https://d2jxbtsa1l6d79.cloudfront.net/static/app-static-assets/core/core-2.1.7/images/brand/cn-logotype-black.svg" /></a>
+      <a href="../index.html"><img id="img_1" src="../images/chargify transparent logo.png" /></a>
       <div class="rightnav">
         <p>
           Don't have an account?
@@ -25,7 +24,7 @@
     <div class="box2">
       <div class="box2_1">
         <img id="img2_1"
-          src="https://d2jxbtsa1l6d79.cloudfront.net/static/app-static-assets/core/core-2.1.7/images/brand/cn-logo-white.svg" />
+          src="../images/logo.png" />
         <div>
           <p id="p1">ANNOUNCING SUMMER 2022 PRODUCT RELEASE</p>
           <p id="p2">
@@ -35,7 +34,7 @@
         <div class="img3_1">
           <img src="https://d190vb4jo83j4z.cloudfront.net/Login_Page_Banner_Aug_22.png" alt="Chargebee" align="left" />
           <p class="para1">
-            Chargebee's Summer 2022 Release brings you better monetization
+            Chargify's Summer 2022 Release brings you better monetization
             capabilities that help you seize revenue opportunities by
             improving customer lifetime value, managing cashflows better, and
             achieving topline growth.
@@ -46,7 +45,7 @@
 
       <div class="box2_2">
         <div>
-          <h4 id="h4">Sign in to Chargebee!</h4>
+          <h4 id="h4">Sign in to Chargify!</h4>
 
           <form action="/action_page.php">
             <label for="mail"></label>
@@ -85,34 +84,24 @@
 <script src="https://kit.fontawesome.com/9723985197.js" crossorigin="anonymous"></script>
 <script>
   var form = document.querySelector('form');
-  var userArr = JSON.parse(localStorage.getItem('userData'));
-
+  var userArr = JSON.parse(localStorage.getItem('Company Details'));
   form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    var ListOfdata = {
-      email: form.email.value,
-      password: form.password.value
-    }
-    checkData(ListOfdata);
-    console.log(ListOfdata);
+    checkData(userArr);
+    console.log(userArr);
   })
 
   function checkData(data) {
-    var flag = false;
-
-    userArr.forEach(function (el) {
-      if ((el.email == data.email) && (el.password == data.phone)) {
-        flag = true;
-      }
-    })
-
-    if (flag) {
+    let pass=document.querySelector("#password")
+    let em=document.querySelector("#email")
+    if ((em.value== data.email) && (pass.value == data.pass)) {
       alert("login successful");
-      window.location = "../index.html"
+      window.location = "../pages/sidebar.html"
     } else {
       alert("login failed");
     }
+    console.log(data.email,data.pass)
   }
 </script>
 </script>
