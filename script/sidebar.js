@@ -230,10 +230,10 @@ function set() {
     if (but.innerText == "+") {
         but.innerText = "-"
         document.querySelector("#set_empty").innerHTML = `
-    <li id="bottom">Configure Chargebee</li>
+    <li id="bottom">Configure Chargify</li>
     <li id="bottom">Import & Export Data</li>
     <li id="bottom">Team Members</li>
-    <li id="bottom">Chargebee Notifications</li>
+    <li id="bottom">Chargify Notifications</li>
     <li id="bottom">Security</li>
     `
         return
@@ -442,14 +442,14 @@ function sidebar_home() {
 
         <div style="margin-left:20px ; ">
             <h3>What can Chargify do for you?</h3>
-            Launch and automate your subscription business with Chargebee’s <br> invoicing, payment
+            Launch and automate your subscription business with Chargify’s <br> invoicing, payment
             recovery, pricing management, and more. Focus on the growth, <br> and we'll handle the rest.
         </div>
     </div>
 
     <div id="sub-main-2">
         <div style="margin-left:20px ; ">
-            <h3>Explore Chargebee</h3>
+            <h3>Explore Chargify</h3>
             <div style="display: flex;">
                             <button
                                 style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
@@ -464,8 +464,8 @@ function sidebar_home() {
                         </div>
             <h3>Give it a try!</h3>
             <p>Welcome to your test site. This is a space for you to play <br> around and get an idea of how
-                Chargebee can work for you.</p>
-            <p>Interact with the essential elements of Chargebee and see how <br> they come together to make
+                Chargify can work for you.</p>
+            <p>Interact with the essential elements of Chargify and see how <br> they come together to make
                 subscription magic happen. Experiment <br> away, everything is flexible here.</p>
             <button onclick="submain2()"
                 style="background-color: rgb(107, 48, 188);color: white;padding: 5px 10px 5px 10px;border: 0; border-radius: 5px;cursor: pointer;">Lets
@@ -1218,7 +1218,7 @@ function get_started() {
     <div class="get_start_div">
     <div class="checklist-1">
     <h1 style="margin:auto;width:fit-content;margin-bottom:20px">Streamline your subscription business</h1>
-    <p style="margin:auto;width:fit-content">This checklist can help you manage essential settings and start using Chargebee.</p>
+    <p style="margin:auto;width:fit-content">This checklist can help you manage essential settings and start using Chargify.</p>
     </div>
    
     
@@ -1230,7 +1230,7 @@ function get_started() {
     <div id="first"></div>
     <div class="checklist" onclick="open_sec()">
     <button id="sec_button">+</button>
-    <p>Integrate Chargebee with your website 
+    <p>Integrate Chargify with your website 
     </p>
     </div>
     <div id="second"></div>

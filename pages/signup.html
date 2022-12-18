@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles/signup.css" />
-  <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png">
-  <title>Sign UP - Get Your Free Sandbox - Chargebee</title>
+  <!-- <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png"> -->
+  <title>Sign UP - Get Your Free Sandbox - Chargify</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
@@ -59,7 +59,7 @@
             <p id="styelOfocheckbox">
               <input type="checkbox" required />
               <label for="c1">I want to be notified about the awesome happenings* at
-                Chargebee</label>
+                Chargify</label>
             </p>
             <br />
             <input type="submit" value="Complete Signup " />
@@ -122,6 +122,7 @@
     console.log(UserListData);
     // userArr.push(UserListData);
     localStorage.setItem("Company Details", JSON.stringify(UserListData));
+    localStorage.setItem("userData", JSON.stringify(UserListData));
     window.location.href = "../pages/Acc_SetUp.html";
   });
 </script>
