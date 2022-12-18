@@ -18,18 +18,18 @@ function change_size() {
 
     if (side_butt.innerText == "<") {
         document.querySelector("#side-bar-tools").innerHTML = `
-        <img id="flag" onclick="get_started()" src="./images/flag.png"></img>
-        <img id="home" onclick="sidebar_home()" src="./images/home.png"></img>
-        <img id="customers" onclick="sidebar_customer()" src="./images/customers.png"></img>
-        <img id="subs" onclick="sidebar_subs()"  src="./images/subscription.png"></img>
-        <img id="invoice" onclick="cred_Notes()" src="./images/invoice.png"></img>
-        <img id="products" onclick="inv_Notes()" src="./images/product.png"></img>
-        <img id="features" src="./images/features.png"></img>
-        <img id="transaction" onclick="entitle()" src="./images/transaction.png"></img>
-        <img id="dashboard"  onclick="logs()" src="./images/dashboard.png"></img>
-        <img id="reports" onclick="rev()" src="./images/reports.png"></img>
-        <img id="app" onclick="myapp()" src="./images/app.png"></img>
-        <img id="settings" onclick="set()" src="./images/settings.png"></img>
+        <img id="flag" onclick="get_started()" src="../images/flag.png"></img>
+        <img id="home" onclick="sidebar_home()" src="../images/home.png"></img>
+        <img id="customers" onclick="sidebar_customer()" src="../images/customers.png"></img>
+        <img id="subs" onclick="sidebar_subs()"  src="../images/subscription.png"></img>
+        <img id="invoice" onclick="cred_Notes()" src="../images/invoice.png"></img>
+        <img id="products" onclick="inv_Notes()" src="../images/product.png"></img>
+        <img id="features" src="../images/features.png"></img>
+        <img id="transaction" onclick="entitle()" src="../images/transaction.png"></img>
+        <img id="dashboard"  onclick="logs()" src="../images/dashboard.png"></img>
+        <img id="reports" onclick="rev()" src="../images/reports.png"></img>
+        <img id="app" onclick="myapp()" src="../images/app.png"></img>
+        <img id="settings" onclick="set()" src="../images/settings.png"></img>
         `
         document.querySelector("#details").innerHTML = null
         document.querySelector("#logo").style.height = "50px"
@@ -256,16 +256,16 @@ function month_3() {
     document.querySelector("#daily").style.backgroundColor = "white"
     document.querySelector("#daily").style.color = "grey"
     document.querySelector("#month_12").style.color = "grey"
-    document.querySelector(".graph").innerHTML = `<img src="./images/graph_9.png" alt="">
-    <img src="./images/graph_3.png" alt="">
-    <img src="./images/graph_8.png" alt="">
-    <img src="./images/graph_5.png" alt="">
-    <img src="./images/graph_2.png" alt="">
-    <img src="./images/graph_1.png" alt="">
-    <img src="./images/graph_7.png" alt="">
-    <img src="./images/graph_8.png" alt="">
-    <img src="./images/graph_9.png" alt="">
-    <img src="./images/graph_10.png" alt="">`
+    document.querySelector(".graph").innerHTML = `<img src="../images/graph_9.png" alt="">
+    <img src="../images/graph_3.png" alt="">
+    <img src="../images/graph_8.png" alt="">
+    <img src="../images/graph_5.png" alt="">
+    <img src="../images/graph_2.png" alt="">
+    <img src="../images/graph_1.png" alt="">
+    <img src="../images/graph_7.png" alt="">
+    <img src="../images/graph_8.png" alt="">
+    <img src="../images/graph_9.png" alt="">
+    <img src="../images/graph_10.png" alt="">`
 }
 function month_6() {
     let x = document.querySelector("#month_6")
@@ -277,16 +277,16 @@ function month_6() {
     document.querySelector("#daily").style.color = "grey"
     document.querySelector("#daily").style.backgroundColor = "white"
     document.querySelector("#month_12").style.backgroundColor = "white"
-    document.querySelector(".graph").innerHTML = `<img src="./images/graph_6_2.png" alt="">
-    <img src="./images/graph_6_1.png" alt="">
-    <img src="./images/graph_6_3.png" alt="">
-    <img src="./images/graph_3.png" alt="">
-    <img src="./images/graph_5.png" alt="">
-    <img src="./images/graph_6_3.png" alt="">
-    <img src="./images/graph_7.png" alt="">
-    <img src="./images/graph_6_1.png" alt="">
-    <img src="./images/graph_6_2.png" alt="">
-    <img src="./images/graph_6_3.png" alt="">`
+    document.querySelector(".graph").innerHTML = `<img src="../images/graph_6_2.png" alt="">
+    <img src="../images/graph_6_1.png" alt="">
+    <img src="../images/graph_6_3.png" alt="">
+    <img src="../images/graph_3.png" alt="">
+    <img src="../images/graph_5.png" alt="">
+    <img src="../images/graph_6_3.png" alt="">
+    <img src="../images/graph_7.png" alt="">
+    <img src="../images/graph_6_1.png" alt="">
+    <img src="../images/graph_6_2.png" alt="">
+    <img src="../images/graph_6_3.png" alt="">`
 }
 function month_12() {
     let x = document.querySelector("#month_12")
@@ -298,16 +298,16 @@ function month_12() {
     document.querySelector("#daily").style.color = "grey"
     document.querySelector("#daily").style.backgroundColor = "white"
     document.querySelector("#month_6").style.backgroundColor = "white"
-    document.querySelector(".graph").innerHTML = `<img src="./images/graph_12_1.png" alt="">
-    <img src="./images/graph_12_2.png" alt="">
-    <img src="./images/graph_12_3.png" alt="">
-    <img src="./images/graph_6_3.png" alt="">
-    <img src="./images/graph_12_1.png" alt="">
-    <img src="./images/graph_12_3.png" alt="">
-    <img src="./images/graph_12_2.png" alt="">
-    <img src="./images/graph_12_1.png" alt="">
-    <img src="./images/graph_1.png" alt="">
-    <img src="./images/graph_12_3.png" alt="">`
+    document.querySelector(".graph").innerHTML = `<img src="../images/graph_12_1.png" alt="">
+    <img src="../images/graph_12_2.png" alt="">
+    <img src="../images/graph_12_3.png" alt="">
+    <img src="../images/graph_6_3.png" alt="">
+    <img src="../images/graph_12_1.png" alt="">
+    <img src="../images/graph_12_3.png" alt="">
+    <img src="../images/graph_12_2.png" alt="">
+    <img src="../images/graph_12_1.png" alt="">
+    <img src="../images/graph_1.png" alt="">
+    <img src="../images/graph_12_3.png" alt="">`
 }
 
 function daily() {
@@ -321,16 +321,16 @@ function daily() {
     document.querySelector("#month_12").style.backgroundColor = "white"
     document.querySelector("#month_6").style.backgroundColor = "white"
 
-    document.querySelector(".graph").innerHTML = `<img src="./images/graph_1.png" alt="">
-    <img src="./images/graph_2.png" alt="">
-    <img src="./images/graph_3.png" alt="">
-    <img src="./images/graph_4.png" alt="">
-    <img src="./images/graph_5.png" alt="">
-    <img src="./images/graph_6.png" alt="">
-    <img src="./images/graph_7.png" alt="">
-    <img src="./images/graph_8.png" alt="">
-    <img src="./images/graph_9.png" alt="">
-    <img src="./images/graph_10.png" alt="">`
+    document.querySelector(".graph").innerHTML = `<img src="../images/graph_1.png" alt="">
+    <img src="../images/graph_2.png" alt="">
+    <img src="../images/graph_3.png" alt="">
+    <img src="../images/graph_4.png" alt="">
+    <img src="../images/graph_5.png" alt="">
+    <img src="../images/graph_6.png" alt="">
+    <img src="../images/graph_7.png" alt="">
+    <img src="../images/graph_8.png" alt="">
+    <img src="../images/graph_9.png" alt="">
+    <img src="../images/graph_10.png" alt="">`
 }
 let subs = []
 fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
@@ -504,16 +504,16 @@ function sidebar_home() {
         <button id="month_12" onclick="month_12()">12 Months</button>
     </div>
     <div class="graph">
-    <img src="./images/graph_1.png" alt="">
-    <img src="./images/graph_2.png" alt="">
-    <img src="./images/graph_3.png" alt="">
-    <img src="./images/graph_4.png" alt="">
-    <img src="./images/graph_5.png" alt="">
-    <img src="./images/graph_6.png" alt="">
-    <img src="./images/graph_7.png" alt="">
-    <img src="./images/graph_8.png" alt="">
-    <img src="./images/graph_9.png" alt="">
-    <img src="./images/graph_10.png" alt="">
+    <img src="../images/graph_1.png" alt="">
+    <img src="../images/graph_2.png" alt="">
+    <img src="../images/graph_3.png" alt="">
+    <img src="../images/graph_4.png" alt="">
+    <img src="../images/graph_5.png" alt="">
+    <img src="../images/graph_6.png" alt="">
+    <img src="../images/graph_7.png" alt="">
+    <img src="../images/graph_8.png" alt="">
+    <img src="../images/graph_9.png" alt="">
+    <img src="../images/graph_10.png" alt="">
 </div>
 `
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,122 +50,88 @@
             border: 2px solid rgb(98, 0, 234);
             cursor: pointer;
         }
-        #back:hover{
-            border: 2px solid black;
-            cursor: pointer;
-        }
-        #back{
-            border: 1px solid rgb(195, 195, 195);
-            background-color: rgb(215, 215, 215);  
-            border-radius: 10px;  
-            text-align: center; 
-            margin-left: 10%;
-            width: 120px;  
-            height: 50px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        #back>h2{
-            margin-top:10px;
-        }
     </style>
 </head>
+
 <body>
     <div class="logo">
-        <img src="/images/chargify_logo.png" alt="">
+        <img src="../images/chargify transparent logo.png" alt="">
     </div>
     <div id="main">
         <h1>Personalize your experience</h1>
         <div style="display: flex;">
             <button
-                style="border-radius: 50px;background-color: rgb(107, 48, 188) ;margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
-            <button
-                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
-            <button
                 style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
             <button
                 style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+            <button
+                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+            <button
+                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
         </div>
-        <h3>3 /4. Which role most closely fits your skillset?</h3>
+        <h3>1 /4. What industry do you operate in?</h3>
     </div>
-   
+
     <div id="main-2">
         <div onclick="next_page1()">
-            <p id="opt1">Founder</p>
+            <p id="opt1">SaaS</p>
         </div>
         <div onclick="next_page2()">
-            <p id="opt2">Engerneering</p>
+            <p id="opt2">E-Commerce</p>
         </div>
         <div onclick="next_page3()">
-            <p id="opt3">Product</p>
+            <p id="opt3">E-Learning</p>
         </div>
         <div onclick="next_page4()">
-            <p id="opt4">Finance</p>
+            <p id="opt4">Media and Entertainment</p>
         </div>
         <div onclick="next_page5()">
-            <p id="opt5">Sales</p>
+            <p id="opt5">Others</p>
         </div>
-        <div onclick="next_page6()">
-            <p id="opt6">Others</p>
-        </div>
-       
-    </div>
-    <div id="back" onclick="prev()">
-        <p>Back</p>
     </div>
 </body>
+
 </html>
 <script>
-   let obj=JSON.parse(localStorage.getItem("Company Details"))
+    let obj=JSON.parse(localStorage.getItem("Company Details"))
     function next_page1(){
         let x=document.querySelector("#opt1").innerText
         console.log(x)
         
-        obj["role"]=x
+        obj["operation"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal4.html"
+        window.location="../pages/personal2.html"
     }
     function next_page2(){
         let x=document.querySelector("#opt2").innerText
         console.log(x)
         
-        obj["role"]=x
+        obj["operation"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal4.html"
+        window.location="../pages/personal2.html"
     }
     function next_page3(){
         let x=document.querySelector("#opt3").innerText
         console.log(x)
         
-        obj["role"]=x
+        obj["operation"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal4.html"
+        window.location="../pages/personal2.html"
     }
     function next_page4(){
         let x=document.querySelector("#opt4").innerText
         console.log(x)
         
-        obj["role"]=x
+        obj["operation"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal4.html"
+        window.location="../pages/personal2.html"
     }
     function next_page5(){
         let x=document.querySelector("#opt5").innerText
         console.log(x)
         
-        obj["role"]=x
+        obj["operation"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal4.html"
-    }
-    function next_page6(){
-        let x=document.querySelector("#opt6").innerText
-        console.log(x)
-        
-        obj["role"]=x
-        localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal4.html"
-    }
-    function prev(){
-        window.location="personal2.html"
+        window.location="../pages/personal2.html"
     }
 </script>

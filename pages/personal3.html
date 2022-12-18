@@ -71,7 +71,7 @@
 </head>
 <body>
     <div class="logo">
-        <img src="/images/chargify_logo.png" alt="">
+        <img src="../images/chargify transparent logo.png" alt="">
     </div>
     <div id="main">
         <h1>Personalize your experience</h1>
@@ -81,25 +81,31 @@
             <button
                 style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
             <button
-                style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
             <button
                 style="border-radius: 50px;background-color: rgb(107, 107, 107);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
         </div>
-        <h3>2 /4. What is the size of your company?</h3>
+        <h3>3 /4. Which role most closely fits your skillset?</h3>
     </div>
    
     <div id="main-2">
         <div onclick="next_page1()">
-            <p id="opt1">1-10 Employees</p>
+            <p id="opt1">Founder</p>
         </div>
         <div onclick="next_page2()">
-            <p id="opt2">11-50 Employees</p>
+            <p id="opt2">Engerneering</p>
         </div>
         <div onclick="next_page3()">
-            <p id="opt3">51-500 Employees</p>
+            <p id="opt3">Product</p>
         </div>
         <div onclick="next_page4()">
-            <p id="opt4">500+ Employees</p>
+            <p id="opt4">Finance</p>
+        </div>
+        <div onclick="next_page5()">
+            <p id="opt5">Sales</p>
+        </div>
+        <div onclick="next_page6()">
+            <p id="opt6">Others</p>
         </div>
        
     </div>
@@ -109,35 +115,56 @@
 </body>
 </html>
 <script>
-    let obj=JSON.parse(localStorage.getItem("Company Details"))
+   let obj=JSON.parse(localStorage.getItem("Company Details"))
     function next_page1(){
         let x=document.querySelector("#opt1").innerText
-        obj["companySize"]=x
+        console.log(x)
+        
+        obj["role"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal3.html"
+        window.location="../pages/personal4.html"
     }
     function next_page2(){
         let x=document.querySelector("#opt2").innerText
         console.log(x)
-        obj["companySize"]=x
+        
+        obj["role"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal3.html"
+        window.location="../pages/personal4.html"
     }
     function next_page3(){
         let x=document.querySelector("#opt3").innerText
         console.log(x)
-        obj["companySize"]=x
+        
+        obj["role"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal3.html"
+        window.location="../pages/personal4.html"
     }
     function next_page4(){
         let x=document.querySelector("#opt4").innerText
         console.log(x)
-        obj["companySize"]=x
+        
+        obj["role"]=x
         localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="personal3.html"
+        window.location="../pages/personal4.html"
+    }
+    function next_page5(){
+        let x=document.querySelector("#opt5").innerText
+        console.log(x)
+        
+        obj["role"]=x
+        localStorage.setItem("Company Details",JSON.stringify(obj))
+        window.location="../pages/personal4.html"
+    }
+    function next_page6(){
+        let x=document.querySelector("#opt6").innerText
+        console.log(x)
+        
+        obj["role"]=x
+        localStorage.setItem("Company Details",JSON.stringify(obj))
+        window.location="../pages/personal4.html"
     }
     function prev(){
-        window.location="personal1.html"
+        window.location="../pages/personal2.html"
     }
 </script>

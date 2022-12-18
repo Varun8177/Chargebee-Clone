@@ -57,7 +57,7 @@
 
 <body>
     <div class="logo">
-        <img src="/images/chargify_logo.png" alt="">
+        <img src="/images/chargify transparent logo.png" alt="">
     </div>
     <div id="main">
         <div class="text">
@@ -93,20 +93,18 @@
 
 </html>
 <script>
-   
+   let obj = JSON.parse(localStorage.getItem("Company Details"))
     function next_page(){
         let x = document.querySelector("#pass").value
         let name=document.querySelector("#name").value
         let cn=document.querySelector("#comp_name").value
-        let obj={
-            "company_name":cn,
-            "name":name,
-            "pass":x
-        }
+        obj["company_name"]=cn
+        obj["name"]=name
+        obj["pass"]=x
         if (x.includes(1) || x.includes(2) || x.includes(3) || x.includes(4) || x.includes(5) || x.includes(6) || x.includes(7) || x.includes(8) || x.includes(9) || x.includes(10)) {
             localStorage.setItem("Company Details",JSON.stringify(obj))
             
-            window.location="personal1.html"
+            window.location="../pages/personal1.html"
         }else{
             alert("Incorrect Password Type")
         }
