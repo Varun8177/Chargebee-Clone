@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalize your experience</title>
+    <style>
+        *{
+            font-family: "Segoe UI";
+        }
+        body {
+            background-color: white
+        }
+
+        .logo>img {
+            height: 50px;
+        }
+
+        #main {
+            margin-left: 10%;
+
+        }
+
+      
+        #main-2 {
+            /* border: 2px solid red; */
+            margin-left: 10%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 100px;
+            gap: 20px;
+            width: 80%;
+        }
+
+        #main-2>div {
+            border: 1px solid rgb(195, 195, 195);
+            background-color: rgb(215, 215, 215);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #main-2>div>p {
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        #main-2>div:hover {
+            border: 2px solid rgb(98, 0, 234);
+            cursor: pointer;
+        }
+
+        #back {
+            border: 1px solid rgb(195, 195, 195);
+            background-color: rgb(215, 215, 215);
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 10%;
+            width: 120px;
+            height: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #back>h2 {
+            margin-top: 10px;
+        }
+
+        #back:hover {
+            border: 2px solid black;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="/images/chargify_logo.png" alt="">
+    </div>
+    <div id="main">
+        <h1>Personalize your experience</h1>
+        <div style="display: flex;">
+            <button
+                style="border-radius: 50px;background-color: rgb(107, 48, 188) ;margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+            <button
+                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+            <button
+                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+            <button
+                style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
+        </div>
+        <h3>4/4. How do you plan to accept payments from customers?</h3>
+    </div>
+
+    <div id="main-2">
+        <div onclick="next_page1()">
+            <p id="opt1">On Your Website</p>
+           
+        </div>
+        <div onclick="next_page2()">
+            <p id="opt2">Through Sales</p>
+           
+        </div>
+        <div onclick="next_page3()">
+            <p id="opt3">Both Website and Sales</p>
+           
+        </div>
+        <div style="height: 100px;" onclick="next_page4()">
+            <p id="opt4">Others</p>
+        </div>
+
+
+    </div>
+    <div id="back" onclick="prev()">
+        <p> Back</p>
+    </div>
+</body>
+
+</html>
+<script>
+    let obj = JSON.parse(localStorage.getItem("Company Details"))
+    function next_page1() {
+        let x = document.querySelector("#opt1").innerText
+        console.log(x)
+
+        obj["payMethod"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(obj);
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("https://639ad06531877e43d6773285.mockapi.io/chargify_users/", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+            alert("Thanks for filling details")
+        window.location = "sidebar.html"
+    }
+    function next_page2() {
+        let x = document.querySelector("#opt2").innerText
+        console.log(x)
+
+        obj["payMethod"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(obj);
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("https://639ad06531877e43d6773285.mockapi.io/chargify_users/", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+            alert("Thanks for filling details")
+        window.location = "sidebar.html"
+    }
+    function next_page3() {
+        let x = document.querySelector("#opt3").innerText
+        console.log(x)
+
+        obj["payMethod"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(obj);
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("https://639ad06531877e43d6773285.mockapi.io/chargify_users/", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+            alert("Thanks for filling details")
+        window.location = "sidebar.html"
+    }
+    function next_page4() {
+        let x = document.querySelector("#opt4").innerText
+        console.log(x)
+
+        obj["payMethod"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify(obj);
+
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+
+        fetch("https://639ad06531877e43d6773285.mockapi.io/chargify_users/", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+            alert("Thanks for filling details")
+        window.location = "sidebar.html"
+    }
+    function prev() {
+        window.location = "personal3.html"
+    }
+</script>
