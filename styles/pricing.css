@@ -110,7 +110,10 @@ background-color: transparent;
     background-color: transparent;
     color: #fff;
 }
-
+#annual_btn,#inr{
+    background-color: #fff;
+    color: black;
+}
 .currency-btn{
     border-radius: 25px;
     padding: 4px 15px;
