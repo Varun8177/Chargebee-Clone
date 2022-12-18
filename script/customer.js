@@ -1,15 +1,16 @@
-//* button to navigate to pricing page
+//! navbar buttons to navigate to diffenrent pages
 
 let pricingBtn = document.getElementById("pricingBtn")
 pricingBtn.addEventListener("click", function(){
-    window.location.href="../permissible-step-1626/pages/Pricing.html"
+    window.location.href="../pages/Pricing.html"
 })
+
 
 let customerBtn = document.getElementById("customerBtn")
 customerBtn.addEventListener("click", function(){
-    window.location.href="./pages/customers.html"
+    window.location.href="../pages/customers.html"
 })
 let partnerBtn = document.getElementById("partnerBtn")
 partnerBtn.addEventListener("click", function(){
-    window.location.href="./pages/partners.html"
+    window.location.href="../pages/partners.html"
 })
