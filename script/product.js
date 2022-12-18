@@ -31,3 +31,30 @@ var acc = document.getElementsByClassName("accordion");
 
 
 console.log("hello world!");
+
+
+let loginBtn= document.getElementById("login")
+loginBtn.addEventListener("click", function(){
+    
+    window.location.href="../pages/login.html"
+})
+
+let demoBtn= document.getElementById("demoBtn")
+demoBtn.addEventListener("click", function(){
+    window.location.href="../pages/demo.html"
+})
+
+let demoBtn2 = document.getElementById("demo_btn")
+demoBtn2.addEventListener("click", function(){
+    window.location.href="../pages/demo.html"
+})
+
+let signUpBtn= document.getElementById("sign_up_2")
+signUpBtn.addEventListener("click", function(){
+    window.location.href="../pages/signup.html"
+})
+
+let sub_demoBtn = document.getElementById("sub_demo")
+sub_demoBtn.addEventListener("click", function(){
+    window.location.href="../pages/demo.html"
+})

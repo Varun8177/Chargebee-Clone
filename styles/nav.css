@@ -178,6 +178,7 @@ justify-content: space-around;
     background-color: transparent;
     border: none;
     /* border:1px solid #000ff0; */
+    cursor: pointer;
 
   }
 

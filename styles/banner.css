@@ -48,8 +48,12 @@
     width: 80%;
     display: flex;
     background-color: #1d0968;
+    
   }
-  
+  .subs-tag input{
+    color: #fff;
+    padding-left: 10px;
+  }
   .subs-tag > button {
     background-color: #7f45ff;
     border-radius: 25px;

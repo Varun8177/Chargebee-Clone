@@ -98,22 +98,25 @@
 }
 
 #demo_btn {
-  border-radius: 20px;
-  font-size: 16px;
+  background-color: #ff7846;
   border: none;
-  height: 45px;
-  font-weight: 500;
-  /* width: 130px; */
-  padding: 10px 15px;
+  width: 120px;
   color: white;
-  background: rgb(91, 33, 126);
-  background: linear-gradient(
-    180deg,
-    rgb(108, 48, 146) 0%,
-    rgba(122, 0, 202, 1) 37%
-  );
+  padding: 5px 10px;
+  height: 35px;
+  cursor: pointer;
 }
-
+#demo-Btn-nav{
+  /* border: 1px solid red; */
+  background-color: #5a21d6;
+  border-radius: 20px;
+cursor: pointer;
+  border: none;
+  width: 120px;
+  color: white;
+  padding: 10px 10px;
+  height: 45px;
+}
 #sign-up-btn {
   border-radius: 20px;
   /* border: none; */
@@ -123,6 +126,7 @@
   font-weight: 500;
   /* width: 150px; */
   padding: 10px 15px;
+  cursor: pointer;
 }
 
 /* logos scroller */
