@@ -1,3 +1,6 @@
+
+
+
 body {
     display: flex;
     background-color: rgb(234, 234, 244);
@@ -12,6 +15,7 @@ body {
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
+    height: 100vh;
 
 }
 
@@ -23,7 +27,7 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
-
+    color: gray;  
 }
 
 #main {
@@ -45,7 +49,7 @@ body {
 #logo {
     height: 70px;
     margin-top: 15px;
-
+ margin-left: 5px;
 }
 
 #details {
@@ -74,17 +78,19 @@ body {
     /* border: 2px solid red; */
 
     display: block;
-    width: 98%;
-    margin-left: 8px;
+    width: 90%;
+    margin-left: 10px;
     margin-top: 10px;
     border-radius: 5px;
     height: 40px;
-    border: 1px solid rgb(176, 176, 176)
+    border: 1px solid rgb(176, 176, 176);
+    padding-left: 10px;
 }
 
 #side-bar-tools {
     /* border: 2px solid red; */
     margin-top: 30px;
+    margin-left: 5px;
 }
 
 .set:hover,
@@ -102,8 +108,8 @@ body {
     background-color: rgb(226, 233, 249);
     cursor: pointer;
     border-radius: 5px;
-    margin-left: 10px;
-    padding-left: 10px;
+    /* margin-left: 10px; */
+    /* padding-left: 10px; */
 }
 
 .invoice,
@@ -124,6 +130,7 @@ body {
     margin-top: -20px;
     font-size: 13px;
     margin-bottom: 10px;
+    padding-left: 10px;
 }
 
 #invoice_button,
@@ -241,20 +248,22 @@ body {
     width: 98%;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: auto;
     gap: 10px;
     padding: 10px 15px 10px 15px;
 }
 
 #sub-main-3>div {
-     padding-left: 10px;
+    padding-left: 10px;
     background-color: rgb(61, 43, 106);
 }
-#sub-main-3>div>h2{
+
+#sub-main-3>div>h2 {
     color: white;
 }
-#sub-main-3>div>h4{
+
+#sub-main-3>div>h4 {
     color: rgb(206, 206, 206);
 }
 
@@ -272,6 +281,7 @@ body {
 #daily {
     background-color: rgb(44, 0, 105);
     cursor: pointer;
+    color: white;
     border: 2px solid gray;
     padding: 5px 10px 5px 10px;
 }
@@ -282,8 +292,13 @@ body {
     cursor: pointer;
     border: 2px solid gray;
     padding: 5px 10px 5px 10px;
+    color: black;
 }
 
+#month_12{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
 #sb_subs_1 {
     height: 50px;
     background-color: white;
@@ -307,6 +322,8 @@ body {
     padding: 10px 15px 10px 15px;
     margin-left: 20px;
     cursor: pointer;
+    /* border: 2px solid red; */
+    border-radius: 5px;
 }
 
 #sb_subs_2 {
@@ -355,6 +372,8 @@ body {
     grid-auto-rows: auto;
     gap: 10px;
     padding: 10px 15px 10px 15px;
+    margin-left: -20px;
+    /* border: 2px solid red; */
 }
 
 .graph>img {
@@ -363,6 +382,9 @@ body {
     border-radius: 10px;
 }
 
+#daily{
+    border-radius: 5px;
+}
 #sb_subs_3 {
     /* border: 2px solid red; */
     background-color: white;
@@ -436,7 +458,8 @@ body {
     margin-top: 33px;
     width: 500px;
     padding-left: 20px;
-    border-radius: 3px;
+    border-radius: 5px;
+   
 }
 
 #emp_input>select {
@@ -561,7 +584,7 @@ body {
     margin-left: 10%;
 }
 
-#log_out{
+#log_out {
     border-radius: 10px;
     background-color: rgb(107, 48, 188);
     margin-right: 5px;
@@ -569,6 +592,8 @@ body {
     height: 30px;
     width: 100px;
     cursor: pointer;
+    color: white;
+    margin-top: 30px;
 }
 
 @media all and (min-width:0px) and (max-width:1000px) {
@@ -605,8 +630,9 @@ body {
         margin-top: 33px;
         width: 100%;
     }
-    #sub-main-3{
-        grid-template-columns: repeat(2,1fr);
+
+    #sub-main-3 {
+        grid-template-columns: repeat(2, 1fr);
         height: fit-content;
     }
 
