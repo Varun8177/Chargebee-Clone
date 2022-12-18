@@ -7,6 +7,7 @@
     /* border: 1px solid red; */
     display: flex;
     margin: auto;
+    /* margin-bottom: 80px; */
 }
 #power>div{
     height: 500px;
@@ -30,15 +31,17 @@
     width: 100%;
 }
 #fresh{
-    margin-top: 30px;
+   
     height: 120px;
     width: 100%;
     /* border: 1px solid black; */
     display: flex;
     margin: auto;
+    margin-top: 80px;
    
 }
 #fresh>div{
+    /* margin-top: 50px; */
     height: 120px;
     width:23%;
     margin: auto;
@@ -72,11 +75,12 @@
 }
 #percona{
     display: flex;
-    margin-top: 30px;
+   
     height: 130px;
     width: 100%;
     /* border: 1px solid red; */
-    margin: auto;
+    margin: auto; 
+    margin-top: 80px;
 }
 #percona>div{
     height: 130px;
@@ -91,16 +95,18 @@
     display: grid;
     width: 80%;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(5,140px);
+    grid-template-rows: repeat(5,180px);
     margin:50px auto;
     /* margin-top: 50px; */
     gap: 50px;
+    margin-bottom: 20px;
     /* border: 1px solid red; */
 }
 #block>div{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     /* border: 1px solid red; */
     border-radius: 5px;
+
 }
 #block>div>img{
     width: 50%;
@@ -113,7 +119,6 @@
     font-size: medium;
     color: rgb(71, 68, 68);
 }
-
 
 
 /* banner part */
