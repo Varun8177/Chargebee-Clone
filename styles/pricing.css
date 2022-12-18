@@ -139,3 +139,258 @@ background-color: transparent;
     font-size: 16px;
     font-size: 500;
 }
+
+
+/* price card section */
+#back-box-price{
+    /* border: 1px solid black; */
+    /* height: 1000px; */
+    background-color: #f8f8f8;
+    /* margin-top: 100px; */
+    padding-top: 65px;
+    padding-bottom: 100px;
+
+}
+#price-card-section{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 70px;
+    /* margin-top: 100px; */
+}
+.price-card{
+    /* border: 1px solid black; */
+    padding-right: 15px;
+
+}
+.curr-typr{
+font-size: 16px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+.price-box{
+    font-size: 36px;
+    font-weight: 500;
+margin-bottom: 10px;
+
+}
+.pay-type{
+    font-size: 16px;
+    font-weight: 600;
+margin-bottom: 10px;
+
+}
+.price-dec{
+    font-size: 14px;
+margin-bottom: 20px;
+
+}
+.get-started-btn{
+    font-size: 14px;
+    margin-top: 20px;
+    background-color:#4300a3;
+    color: #fff;
+    font-size: 16px;
+    /* font-weight: 500; */
+    height: 45px;
+    padding: 5px 20px;
+    border-radius: 4px;
+    border: none;
+    width: 210px;
+
+}
+.tik-box-head{
+    font-weight: 600;
+    font-size: 16px;
+
+}
+.tik-box{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+}
+.tik-box p{
+    font-size: 14px;
+
+}
+.tik-box>div{
+    /* border: 1px solid red; */
+    width: 5%;
+    margin-right: 5px;
+
+}
+.tik-box img{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-right: 5px;
+}
+
+.plan-com-btn{
+    /* border: 1px solid red; */
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+font-size: 20px;
+font-weight: 600;
+color: #0026e6;
+
+}
+
+.plane-box{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    padding-top: 60px;
+}
+.plane-box>div{
+    /* border: 1px solid red; */
+
+    width: 45%;
+}
+.image-side{
+    /* border: 1px solid red; */
+
+}
+.content-side{
+    /* border: 1px solid rgb(0, 76, 255); */
+
+}
+.image-side>div{
+/* border: 1px solid blue; */
+}
+
+.image-side img{
+    width: 80%;
+}
+
+.content-side>div>p:nth-child(1){
+    font-size: 24px;
+    font-weight: 600;
+}
+.content-side>div>p:nth-child(2){
+    font-size: 24px;
+    /* font-weight: 600; */
+    line-height: 1.5;
+}
+
+.content-side button{
+    font-size: 18px;
+    /* font-weight: 500; */
+    border: none;
+    background: rgb(67,0,163);
+background: linear-gradient(107deg, rgba(67,0,163,1) 63%, rgba(130,0,213,1) 100%);
+color: #fff;
+padding: 10px 15px;
+}
+
+/* banner part */
+
+.banner{
+    width: 100%;
+    margin-top: 200px;
+    /* height: 400px; */
+    display: flex;
+  justify-content: center;
+    background: rgb(60,35,152);
+  background: linear-gradient(153deg, rgba(60,35,152,1) 46%, rgba(108,28,136,1) 82%);
+  }
+  .left-part-banner{
+    /* border: 1px solid white; */
+    width: 45%;
+  }
+  .demo-text{
+    color: white;
+    font-size: 44px;
+    font-weight: 700;
+    width:90%;
+  }
+  
+  .right-part-banner{
+    /* border: 1px solid greenyellow; */
+    width: 30%;
+  }
+  
+  #subscribe{
+    width: 100%;
+    height: 55px;
+    background-color: #1d0968;
+    border: none;
+    border-radius: 25px;
+    /* padding: 10px; */
+    
+  }
+  ::placeholder{
+    color: #757575;
+    margin-left: 15px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .subs-tag{
+    /* border: 1px solid wheat; */
+    border-radius: 25px;
+    width: 80%;
+    display: flex;
+    background-color: #1d0968;
+  
+  }
+  
+  .subs-tag>button{
+    background-color: #7f45ff;
+    border-radius: 25px;
+    width: 200px;
+    color: white;
+    font-weight: 500;
+    font-size:16px ;
+    cursor: pointer;
+  }
+  
+  .right-part-content-box{
+    background-color: white;
+    width: 60%;
+    padding: 30px;
+    margin-top: -85px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 15px;
+  }
+  
+  .right-part-content-box{}
+  
+  .right-part-content-box img{
+    border-radius: 50%;
+    width: 80%;
+  }
+  
+  .right-part-img-box{
+    /* border: 1px solid red; */
+    width: 40%;
+  }
+  
+  .bottom-logos{
+    /* border: 1px solid whitesmoke; */
+    display: flex;
+    margin-left: -60px;
+    margin-top: 25px;
+  }
+  
+  .bottom-logos>div>img{
+    width: 75%;
+  }
+  
+  
+  
+  
+  .right-part-banner>img{
+    width: 20%;
+    position: relative;
+    top: -55px;
+    margin-left: 190px;
+    margin-top: -250px;
+  }
+
