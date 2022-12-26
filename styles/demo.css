@@ -1,20 +1,21 @@
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#chargebee_logo{
-    background-color:#5400b1 ;
+#chargebee_logo {
+    background-color: #5400b1;
 }
-#chargebee_logo>img{
+
+#chargebee_logo>img {
     margin-top: 50px;
     width: 10%;
     margin-bottom: 0px;
     margin-left: 74%;
     border: 3px solid transparent;
-    
+
 }
 
-#container{
+#container {
     height: 500px;
     width: 100%;
     border: 1px solid transparent;
@@ -24,17 +25,18 @@
     margin-bottom: 150px;
 }
 
-#container>div:nth-child(1){
+#container>div:nth-child(1) {
     height: 70%;
     width: 40%;
-    margin-top:2%;
+    margin-top: 2%;
     /* border: 2px solid red; */
     margin-left: 12%;
 }
-#container>div:nth-child(2){
+
+#container>div:nth-child(2) {
     height: 750px;
     width: 32%;
-    margin-top:2%;
+    margin-top: 2%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-left: 9%;
     background-color: white;
@@ -42,11 +44,13 @@
     margin-bottom: 30px;
     padding: 10px 20px 10px 20px;
 }
-#heading_container>h1{
+
+#heading_container>h1 {
     font-size: 50px;
     color: white;
 }
-#heading_container>p{
+
+#heading_container>p {
     font-size: 25px;
     color: white;
     padding: 0px 15px;
@@ -54,31 +58,36 @@
     margin-left: 0px;
 }
 
-#form{
+#form {
     padding-top: 20px;
 }
-#form> input{
-  height: 45px;
-  width: 80%;
-  font-size: 15px;
-  padding-left: 10px;
-  border-radius: 5px;
-  margin: 15px 50px 8px 50px;
-  border: 1px solid gray;
- 
+
+#form>input {
+    height: 45px;
+    width: 80%;
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin: 15px 50px 8px 50px;
+    border: 1px solid gray;
+
 }
-#company-resident{
+
+#company-resident {
     margin-left: 50px;
     margin-bottom: 30px;
-   
+
 }
-#description{
+
+#description {
     margin-left: 50px;
 }
-#description>input{
+
+#description>input {
     margin-top: 20px;
 }
-#get_demo>input{
+
+#get_demo>input {
     margin-top: 30px;
     background-color: #5400b1;
     color: white;
@@ -89,11 +98,13 @@
     border-radius: 5px;
     padding: 5px 10px 5px 10px;
 }
-form>p{
+
+form>p {
     margin-left: 53px;
     margin-top: 10px;
 }
-#chargebee_description{
+
+#chargebee_description {
     height: auto;
     width: 90%;
     border: 1px solid transparent;
@@ -101,39 +112,45 @@ form>p{
     margin: auto;
     margin-top: 100px;
 }
-#chargebee_description>div:nth-child(1)>h2{
-   padding: 60px;
+
+#chargebee_description>div:nth-child(1)>h2 {
+    padding: 60px;
 }
 
-#image_section{
+#image_section {
     height: 80%;
 }
-#image_section>img{
+
+#image_section>img {
     width: 300px;
     margin: 30px 30px 30px 30px;
 }
-.dailius{
+
+.dailius {
     margin-left: 60px;
     margin-top: 0px;
 }
-#acheivement_logo{
+
+#acheivement_logo {
     margin-left: 100px;
 }
-#acheivement_logo>img{
+
+#acheivement_logo>img {
     width: 7%;
-    
+
 }
-#logo-section{
+
+#logo-section {
     display: flex;
     margin-top: 400px
 }
 
-#logo-section>img{
+#logo-section>img {
     width: 40%;
 
 }
 
-#fade{
+#fade {
     color: grey;
     font-size: 13px;
 }

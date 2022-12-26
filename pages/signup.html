@@ -51,10 +51,10 @@
         <div id="div">
           <form action="/action_page.php">
             <label id="companyNmae" for="fname">Work email</label><br /><br />
-            <input type="text" id="email" type="email" placeholder="(eg)john.m@company.com" />
+            <input type="text" id="email" type="email" placeholder="(eg)john.m@company.com" required/>
             <br />
             <label id="companyNmae" for="lname">Phone number</label><br /><br />
-            <input type="text" id="phone" type="number" placeholder="81234 56789" />
+            <input type="text" id="phone" type="number" placeholder="81234 56789" required />
             <br /><br />
             <p id="styelOfocheckbox">
               <input type="checkbox" required />
@@ -62,7 +62,7 @@
                 Chargify</label>
             </p>
             <br />
-            <input type="submit" value="Complete Signup " />
+            <input type="submit" value="Complete Signup " id="submit_but" />
             <br />
             <p id="para1signa">
               By clicking on Complete Signup, you agree to our <span id="spancolor">Terms</span> and you

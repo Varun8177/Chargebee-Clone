@@ -1,8 +1,8 @@
-*{
+* {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
-#partners{
+#partners {
     height: 300px;
     width: 100%;
     border: 1px solid transparent;
@@ -11,14 +11,17 @@
     background-color: rgb(31, 31, 138);
     color: white;
 }
-#partners>h1{
+
+#partners>h1 {
     font-size: 60px;
 }
-#partners>p{
+
+#partners>p {
     width: 50%;
     margin-left: 27%;
 }
-#payment{
+
+#payment {
     height: 400px;
     width: 55%;
     /* border: 1px solid teal; */
@@ -26,7 +29,8 @@
     margin-top: 30px;
     text-align: center;
 }
-#payment>button{
+
+#payment>button {
     margin-top: 20px;
     background-color: rgb(52, 102, 240);
     border: none;
@@ -35,47 +39,55 @@
     border-radius: 4px;
     font-size: larger;
 }
-#payment>h1{
+
+#payment>h1 {
     font-size: 40px;
 }
-#payment>p{
+
+#payment>p {
     margin-top: 30px;
     line-height: 25px;
     color: gray;
     font-size: 18px;
 }
-#cyber{
+
+#cyber {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,180px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 180px);
     width: 80%;
     margin: auto;
     margin-top: 20px;
     gap: 50px;
     text-align: center;
 }
-#cyber>div{
-   
+
+#cyber>div {
+
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#cyber>div>img{
+
+#cyber>div>img {
     text-align: center;
     width: 50%;
     margin-top: 70px;
 }
-.h1{
+
+.h1 {
     text-align: center;
     color: purple;
 }
-#independent{
+
+#independent {
     height: 400px;
     width: 55%;
     /* border: 1px solid red; */
     margin: auto;
     text-align: center;
 }
-#independent>button{
+
+#independent>button {
     margin-top: 30px;
     background-color: rgb(52, 102, 240);
     border: none;
@@ -84,69 +96,81 @@
     border-radius: 4px;
     font-size: larger;
 }
-#independent>h1{
+
+#independent>h1 {
     font-size: 40px;
 }
-#independent>p{
+
+#independent>p {
     margin-top: 30px;
     line-height: 25px;
     color: gray;
     font-size: 18px;
 }
-#xero{
+
+#xero {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,180px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 180px);
     width: 80%;
     margin: auto;
     margin-top: 10px;
     gap: 50px;
     text-align: center;
 }
-#xero>div{
+
+#xero>div {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#xero>div>img{
+
+#xero>div>img {
     text-align: center;
     width: 40%;
     margin-top: 70px;
 }
-#channel{
+
+#channel {
     height: auto;
     width: 55%;
     margin: auto;
     text-align: center;
     margin-top: 50px;
 }
-#channel>h1{
+
+#channel>h1 {
     font-size: 40px;
 }
-#channel>p{
+
+#channel>p {
     margin-top: 30px;
     line-height: 25px;
     color: gray;
-    font-size: 18px;  
+    font-size: 18px;
 }
-#aws{
+
+#aws {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 180px;
     width: 80%;
     margin: auto;
     margin-top: 30px;
     gap: 50px;
-    text-align: center; 
+    text-align: center;
 }
-#aws>div{
+
+#aws>div {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#aws>div>img{
+
+#aws>div>img {
     width: 40%;
     margin-top: 50px;
 }
-#sell{
+
+#sell {
     height: auto;
     width: 60%;
     /* border: 1px solid red; */
@@ -154,37 +178,44 @@
     margin-top: 80px;
     text-align: center;
 }
-#sell>h1{
+
+#sell>h1 {
     font-size: 40px;
 }
-#sell>p{
+
+#sell>p {
     line-height: 26px;
     color: grey;
 }
-#gain{
+
+#gain {
     display: flex;
     height: auto;
     width: 100%;
-  
+
     margin: auto;
     margin-top: 40px;
     text-align: center;
 }
-#gain>div{
+
+#gain>div {
     height: 100%;
     width: 30%;
- 
+
     margin: auto;
 }
-#gain>div>img{
+
+#gain>div>img {
     width: 25%;
     margin-top: 15px;
 }
-#gain>div>p{
+
+#gain>div>p {
     color: grey;
     line-height: 26px;
 }
-#btn{
+
+#btn {
     margin-left: 42%;
     margin-top: 30px;
     background-color: rgb(52, 102, 240);
@@ -194,7 +225,8 @@
     border-radius: 4px;
     font-size: larger;
 }
-#market{
+
+#market {
     height: auto;
     width: 60%;
     /* border: 1px solid red; */
@@ -202,14 +234,17 @@
     margin-top: 3rem;
     text-align: center;
 }
-#market>h1{
+
+#market>h1 {
     font-size: 39px;
 }
-#market>p{
+
+#market>p {
     line-height: 26px;
     color: grey;
 }
-#market>button{
+
+#market>button {
     background-color: rgb(52, 102, 240);
     border: none;
     color: white;
@@ -217,21 +252,24 @@
     border-radius: 4px;
     font-size: larger;
 }
-#market_ad{
+
+#market_ad {
     display: flex;
     /* height: 150px; */
     width: 100%;
     /* border: 1px solid red; */
-    margin:50px auto 100px auto;
+    margin: 50px auto 100px auto;
     /* margin-top: 3rem; */
     /* margin-bottom: 100px; */
 }
-#market_ad>div{
+
+#market_ad>div {
     height: 100%;
     width: 18%;
     /* border: 1px solid teal; */
     margin: auto;
 }
-#market_ad>div>img{
+
+#market_ad>div>img {
     width: 70%;
 }

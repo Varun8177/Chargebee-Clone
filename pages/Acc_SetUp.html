@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer setup</title>
     <style>
-         *{
+        * {
             font-family: "Segoe UI";
         }
+
         body {
             background-color: rgb(250, 250, 252);
         }
@@ -21,7 +22,9 @@
         .text {
             margin-left: 50px;
         }
-        .text>input,.text>p{
+
+        .text>input,
+        .text>p {
             margin-top: -5px;
         }
 
@@ -93,19 +96,19 @@
 
 </html>
 <script>
-   let obj = JSON.parse(localStorage.getItem("Company Details"))
-    function next_page(){
+    let obj = JSON.parse(localStorage.getItem("Company Details"))
+    function next_page() {
         let x = document.querySelector("#pass").value
-        let name=document.querySelector("#name").value
-        let cn=document.querySelector("#comp_name").value
-        obj["company_name"]=cn
-        obj["name"]=name
-        obj["pass"]=x
+        let name = document.querySelector("#name").value
+        let cn = document.querySelector("#comp_name").value
+        obj["company_name"] = cn
+        obj["name"] = name
+        obj["pass"] = x
         if (x.includes(1) || x.includes(2) || x.includes(3) || x.includes(4) || x.includes(5) || x.includes(6) || x.includes(7) || x.includes(8) || x.includes(9) || x.includes(10)) {
-            localStorage.setItem("Company Details",JSON.stringify(obj))
-            
-            window.location="../pages/personal1.html"
-        }else{
+            localStorage.setItem("Company Details", JSON.stringify(obj))
+
+            window.location = "../pages/personal1.html"
+        } else {
             alert("Incorrect Password Type")
         }
     }
