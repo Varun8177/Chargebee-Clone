@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>personalize your experience-2</title>
     <style>
-        *{
+        * {
             font-family: "Segoe UI";
         }
+
         body {
             background-color: white
         }
@@ -22,7 +24,7 @@
 
         }
 
-      
+
         #main-2 {
             /* border: 2px solid red; */
             margin-left: 10%;
@@ -49,26 +51,30 @@
             border: 2px solid rgb(98, 0, 234);
             cursor: pointer;
         }
-        #back:hover{
+
+        #back:hover {
             border: 2px solid black;
             cursor: pointer;
         }
-        #back{
+
+        #back {
             border: 1px solid rgb(195, 195, 195);
-            background-color: rgb(215, 215, 215);  
-            border-radius: 10px;  
-            text-align: center; 
+            background-color: rgb(215, 215, 215);
+            border-radius: 10px;
+            text-align: center;
             margin-left: 10%;
-            width: 120px;  
+            width: 120px;
             height: 50px;
             cursor: pointer;
             margin-top: 20px;
         }
-        #back>h2{
-            margin-top:10px;
+
+        #back>h2 {
+            margin-top: 10px;
         }
     </style>
 </head>
+
 <body>
     <div class="logo">
         <img src="../images/chargify transparent logo.png" alt="">
@@ -87,7 +93,7 @@
         </div>
         <h3>2 /4. What is the size of your company?</h3>
     </div>
-   
+
     <div id="main-2">
         <div onclick="next_page1()">
             <p id="opt1">1-10 Employees</p>
@@ -101,43 +107,44 @@
         <div onclick="next_page4()">
             <p id="opt4">500+ Employees</p>
         </div>
-       
+
     </div>
     <div id="back" onclick="prev()">
         <p>Back</p>
     </div>
 </body>
+
 </html>
 <script>
-    let obj=JSON.parse(localStorage.getItem("Company Details"))
-    function next_page1(){
-        let x=document.querySelector("#opt1").innerText
-        obj["companySize"]=x
-        localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="../pages/personal3.html"
+    let obj = JSON.parse(localStorage.getItem("Company Details"))
+    function next_page1() {
+        let x = document.querySelector("#opt1").innerText
+        obj["companySize"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        window.location = "../pages/personal3.html"
     }
-    function next_page2(){
-        let x=document.querySelector("#opt2").innerText
+    function next_page2() {
+        let x = document.querySelector("#opt2").innerText
         console.log(x)
-        obj["companySize"]=x
-        localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="../pages/personal3.html"
+        obj["companySize"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        window.location = "../pages/personal3.html"
     }
-    function next_page3(){
-        let x=document.querySelector("#opt3").innerText
+    function next_page3() {
+        let x = document.querySelector("#opt3").innerText
         console.log(x)
-        obj["companySize"]=x
-        localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="../pages/personal3.html"
+        obj["companySize"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        window.location = "../pages/personal3.html"
     }
-    function next_page4(){
-        let x=document.querySelector("#opt4").innerText
+    function next_page4() {
+        let x = document.querySelector("#opt4").innerText
         console.log(x)
-        obj["companySize"]=x
-        localStorage.setItem("Company Details",JSON.stringify(obj))
-        window.location="../pages/personal3.html"
+        obj["companySize"] = x
+        localStorage.setItem("Company Details", JSON.stringify(obj))
+        window.location = "../pages/personal3.html"
     }
-    function prev(){
-        window.location="../pages/personal1.html"
+    function prev() {
+        window.location = "../pages/personal1.html"
     }
 </script>

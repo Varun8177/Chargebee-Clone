@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -29,7 +29,7 @@ body {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
-    color: gray;  
+    color: gray;
 }
 
 #main {
@@ -51,7 +51,7 @@ body {
 #logo {
     height: 70px;
     margin-top: 25px;
- margin-left: 5px;
+    margin-left: 5px;
 }
 
 #details {
@@ -237,10 +237,11 @@ body {
     margin-top: 10px;
 }
 
-#sub-main-1>div>p{
+#sub-main-1>div>p {
     color: rgb(62, 62, 62);
     font-size: 15px;
 }
+
 #sub-main-2 {
     display: flex;
     margin-top: 20px;
@@ -282,14 +283,14 @@ body {
 #buttons_home>button {
 
     margin-top: 20px;
-   
+
     margin-left: -10px;
-    
+
 }
 
 #buttons_home {
     margin-left: 10px;
-    /* border: 2px solid red; */    
+    /* border: 2px solid red; */
 }
 
 #daily {
@@ -309,10 +310,11 @@ body {
     color: black;
 }
 
-#month_12{
+#month_12 {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
 #sb_subs_1 {
     height: 50px;
     background-color: white;
@@ -396,9 +398,10 @@ body {
     border-radius: 10px;
 }
 
-#daily{
+#daily {
     border-radius: 5px;
 }
+
 #sb_subs_3 {
     /* border: 2px solid red; */
     background-color: white;
@@ -478,16 +481,16 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 20px;
-   
+
 }
 
 #emp_input>select {
-    height:30px;
-    margin-top:38px;
+    height: 30px;
+    margin-top: 38px;
     width: 540px;
-   
+
     border-radius: 5px;
-     /* height: 90px; */
+    /* height: 90px; */
 }
 
 .get_start_div {
@@ -621,7 +624,12 @@ body {
     margin-left: 10px;
 }
 
-#cus_info>p,#subs_info>p,#next_ren>p,#mrp>p,#createon>p,#uid>p{
+#cus_info>p,
+#subs_info>p,
+#next_ren>p,
+#mrp>p,
+#createon>p,
+#uid>p {
     font-size: 15px;
 }
 

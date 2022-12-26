@@ -23,8 +23,7 @@
     </div>
     <div class="box2">
       <div class="box2_1">
-        <img id="img2_1"
-          src="../images/logo.png" />
+        <img id="img2_1" src="../images/logo.png" />
         <div>
           <p id="p1">ANNOUNCING SUMMER 2022 PRODUCT RELEASE</p>
           <p id="p2">
@@ -93,15 +92,15 @@
   })
 
   function checkData(data) {
-    let pass=document.querySelector("#password")
-    let em=document.querySelector("#email")
-    if ((em.value== data.email) && (pass.value == data.pass)) {
+    let pass = document.querySelector("#password")
+    let em = document.querySelector("#email")
+    if ((em.value == data.email) && (pass.value == data.pass)) {
       alert("login successful");
       window.location = "../pages/sidebar.html"
     } else {
       alert("login failed");
     }
-    console.log(data.email,data.pass)
+    console.log(data.email, data.pass)
   }
 </script>
 </script>
