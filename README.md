@@ -15,6 +15,4 @@ Nirupama Biswas,Kisan Kumar Panda.
 
 Tech Stack used in this project:
 
-HTML,
-CSS,
-JavaScript
+HTML,CSS,JavaScript
