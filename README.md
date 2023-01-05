@@ -13,6 +13,6 @@ Chargify is the subscription billing and revenue management platform that lets y
 the clone of chargebee.com which was given by Masai School during the unit-3 curriculum.we are 4 members in the project team Varun Ergurala,Madhur Nadamwar,
 Nirupama Biswas,Kisan Kumar Panda.
 
-Tech Stack used in this project:
+## Tech Stack used in this project:
 
-HTML,CSS,JavaScript
+HTML , CSS , JavaScript
