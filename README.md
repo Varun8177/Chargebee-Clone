@@ -9,9 +9,7 @@ Hello there,I and my teammates would like to introduce you to the website we had
 
 ### Chargify
 
-Chargify is the subscription billing and revenue management platform that lets you solve for your today, and scale for your tomorrow.This is 
-the clone of chargebee.com which was given by Masai School during the unit-3 curriculum.we are 4 members in the project team Varun Ergurala,Madhur Nadamwar,
-Nirupama Biswas,Kisan Kumar Panda.
+Charggify is a SaaS product company which build subscription and billing software. This is the clone of chargebee.com which was given by Masai School during the unit-3 curriculum. We are 4 members in the project team - Varun Ergurala, Madhur Nadamwar, Nirupama Biswas, Kisan Kumar Panda.
 
 ## Tech Stack used in this project:
 
