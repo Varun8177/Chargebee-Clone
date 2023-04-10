@@ -1,6 +1,7 @@
 
 //  &#9654;
 
+
 let mydetails = JSON.parse(localStorage.getItem("Company Details"))
 let email = "vaerunsdasd@gmail.com"
 let com = mydetails.company_name
@@ -13,7 +14,12 @@ document.querySelector("#details").innerHTML = `
     <button id="select_butt">select plan &#8594;</button>
     `
 function change_size() {
-
+    let mydetails = JSON.parse(localStorage.getItem("Company Details"))
+    let email = "vaerunsdasd@gmail.com"
+    let com = mydetails.company_name
+    console.log(mydetails)
+    let n = mydetails.name;
+    email = email.substring(1, 12) + "..."
     let side_butt = document.querySelector("#open-sideBar")
 
     if (side_butt.innerText == "<") {
@@ -230,10 +236,10 @@ function set() {
     if (but.innerText == "+") {
         but.innerText = "-"
         document.querySelector("#set_empty").innerHTML = `
-    <li id="bottom">Configure Chargebee</li>
+    <li id="bottom">Configure Chargify</li>
     <li id="bottom">Import & Export Data</li>
     <li id="bottom">Team Members</li>
-    <li id="bottom">Chargebee Notifications</li>
+    <li id="bottom">Chargify Notifications</li>
     <li id="bottom">Security</li>
     `
         return
@@ -332,31 +338,76 @@ function daily() {
     <img src="../images/graph_9.png" alt="">
     <img src="../images/graph_10.png" alt="">`
 }
-let subs = []
-fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
-    .then((res) => res.json())
-    .then((data) => {
-        subs = data;
-        console.log(data)
-    })
-    .catch((err) => console.log(err))
+// let subs = []
 
 function sidebar_subs() {
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
+        .then((res) => res.json())
+        .then((data) => {
+            // subs = data;
+            sidebar_subs1(data)
+        })
+        .catch((err) => console.log(err))
+
+}
+function sort_subs1() {
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
+        .then((res) => res.json())
+        .then((subs) => {
+            // subs = data;
+            sort_subs(subs)
+        })
+        .catch((err) => console.log(err))
+
+}
+function subs_input2() {
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
+        .then((res) => res.json())
+        .then((subs) => {
+            // subs = data;
+            subs_input1(subs)
+        })
+        .catch((err) => console.log(err))
+
+}
+function customer_input2() {
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
+        .then((res) => res.json())
+        .then((subs) => {
+            // subs = data;
+            customer_input1(subs)
+        })
+        .catch((err) => console.log(err))
+
+}
+function sort_customers1() {
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
+        .then((res) => res.json())
+        .then((subs) => {
+            // subs = data;
+            sort_customers(subs)
+        })
+        .catch((err) => console.log(err))
+
+}
+
+function sidebar_subs1(data) {
+    console.log(data)
     document.querySelector("#main").innerHTML = `
     <div id="sb_subs_1">
     <h3>All Subscriptions</h3>
     <div>
-     <button onclick="edit_empty_user()">Edit Subscriptions</button>
-     <button onclick="create_empty_user()" style="background-color:#6200ea;color:white;border:0;">Create Subscriptions</button>
+     <button onclick="edit_empty_subs()">Edit Subscriptions</button>
+     <button onclick="create_empty_subs()" style="background-color:#6200ea;color:white;border:0;">Create Subscriptions</button>
     </div>
     </div>
     <div id="create_empty_user"></div>
 
     <div id="sb_subs_2">
-    <h3>${subs.length} Subscriptions Available</h3>
-    <input id="subs_input" oninput="subs_input1()" type="text" placeholder="search for company / name">
+    <h3>${data.length} Subscriptions Available</h3>
+    <input id="subs_input" oninput="subs_input2()" type="text" placeholder="search for company / name">
     <div>
-    <select name="Sort" id="sub_sort" onchange="sort_subs()">
+    <select name="Sort" id="sub_sort" onchange="sort_subs1()">
     <option value="Sort">Sort</option>
     <option value="L-H">MRP Low - High</option>
   <option value="H-L">MRP High - Low</option>
@@ -378,21 +429,21 @@ function sidebar_subs() {
    </div>
     `
 
-    for (let i = 0; i < subs.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         let div = document.createElement("div")
 
         let p1 = document.createElement("p")
-        p1.innerText = subs[i].SubscriptionInfo
+        p1.innerText = data[i].SubscriptionInfo
         let p2 = document.createElement("p")
-        p2.innerText = subs[i].CustomerInfo
+        p2.innerText = data[i].CustomerInfo
         let p3 = document.createElement("p")
-        p3.innerText = subs[i].NextRenewal
+        p3.innerText = data[i].NextRenewal
         let p4 = document.createElement("p")
-        p4.innerText = subs[i].MRP
+        p4.innerText = data[i].MRP
         let p5 = document.createElement("p")
-        p5.innerText = subs[i].Createdon
+        p5.innerText = data[i].Createdon
         let p6 = document.createElement("p")
-        p6.innerText = subs[i].id
+        p6.innerText = data[i].id
         let butt = document.createElement("button")
         butt.innerText = "X"
         butt.style.display = "block"
@@ -417,7 +468,7 @@ function sidebar_subs() {
                 .then(response => response.json())
                 .then(result => {
                     alert("subscription Cancelled")
-                    location.reload()
+                    sidebar_subs(result)
                     console.log(result)
                 })
                 .catch(error => console.log('error', error));
@@ -430,7 +481,6 @@ function sidebar_subs() {
         document.querySelector("#uid").append(p6)
         document.querySelector("#cancel").append(butt)
     }
-
 }
 
 function sidebar_home() {
@@ -442,14 +492,14 @@ function sidebar_home() {
 
         <div style="margin-left:20px ; ">
             <h3>What can Chargify do for you?</h3>
-            Launch and automate your subscription business with Chargebee’s <br> invoicing, payment
+            Launch and automate your subscription business with Chargify’s <br> invoicing, payment
             recovery, pricing management, and more. Focus on the growth, <br> and we'll handle the rest.
         </div>
     </div>
 
     <div id="sub-main-2">
         <div style="margin-left:20px ; ">
-            <h3>Explore Chargebee</h3>
+            <h3>Explore Chargify</h3>
             <div style="display: flex;">
                             <button
                                 style="border-radius: 50px;background-color: rgb(107, 48, 188);margin-right: 5px;border-radius: 50px;height: 20px;width: 20px; border: 0;"></button>
@@ -464,8 +514,8 @@ function sidebar_home() {
                         </div>
             <h3>Give it a try!</h3>
             <p>Welcome to your test site. This is a space for you to play <br> around and get an idea of how
-                Chargebee can work for you.</p>
-            <p>Interact with the essential elements of Chargebee and see how <br> they come together to make
+                Chargify can work for you.</p>
+            <p>Interact with the essential elements of Chargify and see how <br> they come together to make
                 subscription magic happen. Experiment <br> away, everything is flexible here.</p>
             <button onclick="submain2()"
                 style="background-color: rgb(107, 48, 188);color: white;padding: 5px 10px 5px 10px;border: 0; border-radius: 5px;cursor: pointer;">Lets
@@ -519,7 +569,7 @@ function sidebar_home() {
 }
 
 
-function subs_input1() {
+function subs_input1(subs) {
     let val = document.querySelector("#subs_input").value
     let inp = subs.filter((elem, i) => {
         return elem.CustomerInfo.toLowerCase().includes(val.toLowerCase())
@@ -575,7 +625,7 @@ function subs_input1() {
                 .then(response => response.json())
                 .then(result => {
                     alert("subscription Cancelled")
-                    location.reload()
+                    sidebar_subs(result)
                     console.log(result)
                 })
                 .catch(error => console.log('error', error));
@@ -591,9 +641,7 @@ function subs_input1() {
     }
     console.log(inp)
 }
-// function subs_select(){
-//     document.querySelector("")
-// }
+
 
 
 function create_empty_user() {
@@ -621,6 +669,35 @@ function create_empty_user() {
          <input id="user_mrp" placeholder="Price" style="height:20px; align-self:center" type="text"> 
      
         <button onclick="new_user()">CREATE</button>
+        </div>
+   </div>
+    `
+}
+function create_empty_subs() {
+    document.querySelector("#create_empty_user").style.height = "320px"
+    document.querySelector("#create_empty_user").style.paddingLeft = "30px"
+    document.querySelector("#create_empty_user").style.paddingTop = "10px";
+    document.querySelector("#create_empty_user").style.paddingBottom = "30px";
+    document.querySelector("#create_empty_user").innerHTML = `
+    <button onclick="closing()">&#9747;</button>
+    <div id="emp_user1">
+      <div id="emp_h4"> 
+      <h4>Subscription :</h4>
+      <h4>Name :</h4>
+      <h4>Renewal :</h4> 
+      <h4>MRP :</h4> 
+     </div>
+     
+     <div id="emp_input"> <select name="filter" id="sub_name">
+       <option value="Monthly INR Yearly">Monthly INR Yearly</option>
+       <option value="Yearly INR Yearly">Yearly INR Yearly</option>
+       <option value="Annual INR Yearly">Annual INR Yearly</option>
+           </select> 
+         <input id="user_name" placeholder="Company Name" style="height:20px; align-self:center" type="text"> 
+          <input id="ren" placeholder="Renewal month" style="height:20px; align-self:center" type="text"> 
+         <input id="user_mrp" placeholder="Price" style="height:20px; align-self:center" type="text"> 
+     
+        <button onclick="new_subs()">CREATE</button>
         </div>
    </div>
     `
@@ -654,6 +731,38 @@ function edit_empty_user() {
          <input id="user_mrp" placeholder="Price" style="height:20px; align-self:center" type="text"> 
      
         <button onclick="edit_user()">EDIT</button>
+        </div>
+   </div>
+    `
+}
+function edit_empty_subs() {
+    document.querySelector("#create_empty_user").style.height = "400px"
+    document.querySelector("#create_empty_user").style.paddingLeft = "30px"
+    document.querySelector("#create_empty_user").style.paddingTop = "10px";
+    document.querySelector("#create_empty_user").style.paddingBottom = "30px";
+    document.querySelector("#create_empty_user").innerHTML = `
+    <button onclick="closing()">&#9747;</button>
+    <div id="emp_user1">
+      <div id="emp_h4" >
+      <h4 style="margin-top: 43px;">UID :</h4> 
+      <h4 style="margin-top: 43px;">Subscription :</h4>
+      <h4 style="margin-top: 43px;">Name :</h4>
+      <h4 style="margin-top: 43px;">Renewal :</h4> 
+      <h4 style="margin-top: 43px;">MRP :</h4> 
+     </div>
+     
+     <div id="emp_input">
+     <input id="uid" placeholder="UID" style="height:20px; align-self:center;" type="text">
+     <select name="filter" style="height:30px;margin-top:42px" id="sub_name">
+       <option value="Monthly INR Yearly">Monthly INR Yearly</option>
+       <option value="Yearly INR Yearly">Yearly INR Yearly</option>
+       <option value="Annual INR Yearly">Annual INR Yearly</option>
+           </select> 
+         <input id="user_name" placeholder="Company Name" style="height:20px; align-self:center " type="text"> 
+          <input id="ren" placeholder="Renewal month" style="height:20px; align-self:center" type="text"> 
+         <input id="user_mrp" placeholder="Price" style="height:20px; align-self:center" type="text"> 
+     
+        <button onclick="edit_subs()">EDIT</button>
         </div>
    </div>
     `
@@ -701,8 +810,8 @@ function new_user() {
     fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/", requestOptions)
         .then(response => response.json())
         .then(data => {
-            alert("New subscription created")
-            location.reload()
+            alert("New Customer created")
+            sidebar_customer(data)
         })
         .catch(error => alert("Something went wrong"));
 }
@@ -742,13 +851,93 @@ function edit_user() {
     fetch(`https://639ad06531877e43d6773285.mockapi.io/Subs/${myUID}`, requestOptions)
         .then(response => response.json())
         .then(data => {
-            alert("Subscription Edited")
-            location.reload()
+            alert("Customer Edited")
+            sidebar_customer(data)
         })
         .catch(error => alert("Bad request"));
 }
 
-function sort_subs() {
+function edit_subs() {
+    let obj = {}
+
+    let myUID = document.querySelector("#uid").value;
+    let CustomerInfo = document.querySelector("#user_name").value;
+    let NextRenewal = document.querySelector("#ren").value;
+    let MRP = document.querySelector("#user_mrp").value
+    if (CustomerInfo !== "") {
+        obj["CustomerInfo"] = CustomerInfo
+    }
+    if (NextRenewal !== "") {
+        obj["NextRenewal"] = NextRenewal
+    }
+    if (MRP !== "") {
+        obj["MRP"] = MRP + " INR";
+    }
+    if (myUID === "") {
+        alert("Please Enter UID to make Changes")
+        return
+    }
+    console.log(obj)
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify(obj);
+
+    var requestOptions = {
+        method: 'PUT',
+        headers: myHeaders,
+        body: raw
+    };
+
+    fetch(`https://639ad06531877e43d6773285.mockapi.io/Subs/${myUID}`, requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            alert("Subscription Edited")
+            sidebar_subs(data)
+        })
+        .catch(error => alert("Bad request"));
+}
+function new_subs() {
+    let month = new Date().getMonth()
+    let day = new Date().getDate()
+    let year = new Date().getFullYear()
+    console.log(day, month, year)
+    let SubscriptionInfo = document.querySelector("#sub_name").value;
+    let CustomerInfo = document.querySelector("#user_name").value;
+    let NextRenewal = document.querySelector("#ren").value;
+    let MRP = document.querySelector("#user_mrp").value + " INR";
+    console.log(SubscriptionInfo)
+    if (NextRenewal == "" || SubscriptionInfo == "" || CustomerInfo == "" || MRP == "") {
+        alert("Please Fill details to create a new user")
+        return
+    }
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+        "SubscriptionInfo": SubscriptionInfo,
+        "CustomerInfo": CustomerInfo,
+        "NextRenewal": NextRenewal,
+        "MRP": MRP,
+        "Createdon": `${day}/${month}/${year}`,
+        "id": "2"
+    });
+
+    var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw
+    };
+
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/", requestOptions)
+        .then(response => response.json())
+        .then(data => {
+            alert("New Subscription created")
+            sidebar_subs(data)
+        })
+        .catch(error => alert("Something went wrong"));
+}
+function sort_subs(subs) {
     let x = document.querySelector("#sub_sort").value
     if (x == "L-H") {
         let lth = subs.sort((a, b) => {
@@ -805,7 +994,7 @@ function sort_subs() {
                     .then(response => response.json())
                     .then(result => {
                         alert("subscription Cancelled")
-                        location.reload()
+                        sidebar_subs(result)
                         console.log(result)
                     })
                     .catch(error => console.log('error', error));
@@ -878,7 +1067,7 @@ function sort_subs() {
                     .then(response => response.json())
                     .then(result => {
                         alert("subscription Cancelled")
-                        location.reload()
+                        sidebar_subs(result)
                         console.log(result)
                     })
                     .catch(error => console.log('error', error));
@@ -900,8 +1089,18 @@ function sort_subs() {
 
 }
 
-
 function sidebar_customer() {
+    fetch("https://639ad06531877e43d6773285.mockapi.io/Subs/")
+        .then((res) => res.json())
+        .then((data) => {
+            // subs = data;
+            sidebar_customer1(data)
+        })
+        .catch((err) => console.log(err))
+}
+
+
+function sidebar_customer1(data) {
     document.querySelector("#main").innerHTML = `
     <div id="sb_subs_1">
     <h3>All Customers</h3>
@@ -913,10 +1112,10 @@ function sidebar_customer() {
     <div id="create_empty_user"></div>
 
     <div id="sb_subs_2">
-    <h3>${subs.length} Customers Available</h3>
-    <input id="subs_input" oninput="customer_input1()" type="text" placeholder="search for customer / name">
+    <h3>${data.length} Customers Available</h3>
+    <input id="subs_input" oninput="customer_input2()" type="text" placeholder="search for customer / name">
     <div>
-    <select name="Sort" id="sub_sort" onchange="sort_customers()">
+    <select name="Sort" id="sub_sort" onchange="sort_customers1()">
     <option value="Sort">Sort</option>
     <option value="L-H">MRP Low - High</option>
   <option value="H-L">MRP High - Low</option>
@@ -938,21 +1137,21 @@ function sidebar_customer() {
    </div>
     `
 
-    for (let i = 0; i < subs.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         let div = document.createElement("div")
 
         let p1 = document.createElement("p")
-        p1.innerText = subs[i].SubscriptionInfo
+        p1.innerText = data[i].SubscriptionInfo
         let p2 = document.createElement("p")
-        p2.innerText = subs[i].CustomerInfo
+        p2.innerText = data[i].CustomerInfo
         let p3 = document.createElement("p")
-        p3.innerText = subs[i].NextRenewal
+        p3.innerText = data[i].NextRenewal
         let p4 = document.createElement("p")
-        p4.innerText = subs[i].MRP
+        p4.innerText = data[i].MRP
         let p5 = document.createElement("p")
-        p5.innerText = subs[i].Createdon
+        p5.innerText = data[i].Createdon
         let p6 = document.createElement("p")
-        p6.innerText = subs[i].id
+        p6.innerText = data[i].id
         let butt = document.createElement("button")
         butt.innerText = "X"
         butt.style.display = "block"
@@ -977,7 +1176,7 @@ function sidebar_customer() {
                 .then(response => response.json())
                 .then(result => {
                     alert("subscription Cancelled")
-                    location.reload()
+                    sidebar_customer(result)
                     console.log(result)
                 })
                 .catch(error => console.log('error', error));
@@ -993,7 +1192,7 @@ function sidebar_customer() {
 }
 
 
-function customer_input1() {
+function customer_input1(subs) {
     let val = document.querySelector("#subs_input").value
     let inp = subs.filter((elem, i) => {
         return elem.CustomerInfo.toLowerCase().includes(val.toLowerCase())
@@ -1047,7 +1246,7 @@ function customer_input1() {
                 .then(response => response.json())
                 .then(result => {
                     alert("subscription Cancelled")
-                    location.reload()
+                    sidebar_customer(result)
                     console.log(result)
                 })
                 .catch(error => console.log('error', error));
@@ -1065,7 +1264,7 @@ function customer_input1() {
 }
 
 
-function sort_customers() {
+function sort_customers(subs) {
     let x = document.querySelector("#sub_sort").value
     if (x == "L-H") {
         let lth = subs.sort((a, b) => {
@@ -1120,7 +1319,7 @@ function sort_customers() {
                     .then(response => response.json())
                     .then(result => {
                         alert("subscription Cancelled")
-                        location.reload()
+                        sidebar_customer(result)
                         console.log(result)
                     })
                     .catch(error => console.log('error', error));
@@ -1191,7 +1390,7 @@ function sort_customers() {
                     .then(response => response.json())
                     .then(result => {
                         alert("subscription Cancelled")
-                        location.reload()
+                        sidebar_customer(result)
                         console.log(result)
                     })
                     .catch(error => console.log('error', error));
@@ -1218,7 +1417,7 @@ function get_started() {
     <div class="get_start_div">
     <div class="checklist-1">
     <h1 style="margin:auto;width:fit-content;margin-bottom:20px">Streamline your subscription business</h1>
-    <p style="margin:auto;width:fit-content">This checklist can help you manage essential settings and start using Chargebee.</p>
+    <p style="margin:auto;width:fit-content">This checklist can help you manage essential settings and start using Chargify.</p>
     </div>
    
     
@@ -1230,7 +1429,7 @@ function get_started() {
     <div id="first"></div>
     <div class="checklist" onclick="open_sec()">
     <button id="sec_button">+</button>
-    <p>Integrate Chargebee with your website 
+    <p>Integrate Chargify with your website 
     </p>
     </div>
     <div id="second"></div>
@@ -1351,24 +1550,25 @@ function open_fourth() {
 }
 
 
-let creditNotes = [{
-    "SubscriptionInfo": "# TEST-CN-2",
-    "CustomerInfo": "CustomerInfo 38",
-    "NextRenewal": "Refundable",
-    "MRP": "202",
-    "Createdon": "2049-01-07",
-    "id": "38"
-},
-{
-    "SubscriptionInfo": "# TEST-CN-6",
-    "CustomerInfo": "CustomerInfo 39",
-    "NextRenewal": "Adjustment",
-    "MRP": "336",
-    "Createdon": "2072-03-11",
-    "id": "39"
-}]
+
 
 function cred_Notes() {
+    let creditNotes = [{
+        "SubscriptionInfo": "# TEST-CN-2",
+        "CustomerInfo": "CustomerInfo 38",
+        "NextRenewal": "Refundable",
+        "MRP": "202",
+        "Createdon": "2049-01-07",
+        "id": "38"
+    },
+    {
+        "SubscriptionInfo": "# TEST-CN-6",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336",
+        "Createdon": "2072-03-11",
+        "id": "39"
+    }]
     document.querySelector("#main").innerHTML = `
     <div id="sb_subs_1">
     <h3>All Credit Details</h3>
@@ -1446,6 +1646,22 @@ function cred_Notes() {
 
 
 function sort_credit() {
+    let creditNotes = [{
+        "SubscriptionInfo": "# TEST-CN-2",
+        "CustomerInfo": "CustomerInfo 38",
+        "NextRenewal": "Refundable",
+        "MRP": "202",
+        "Createdon": "2049-01-07",
+        "id": "38"
+    },
+    {
+        "SubscriptionInfo": "# TEST-CN-6",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336",
+        "Createdon": "2072-03-11",
+        "id": "39"
+    }]
     let x = document.querySelector("#sub_sort").value
     if (x == "L-H") {
         let lth = creditNotes.sort((a, b) => {
@@ -1559,43 +1775,44 @@ function sort_credit() {
 
 }
 
-let invNotes = [{
-    "SubscriptionInfo": "Pending",
-    "CustomerInfo": "CustomerInfo 38",
-    "NextRenewal": "Refundable",
-    "MRP": "202.00",
-    "Createdon": "2049-01-07T12:11:32.957Z",
-    "id": "38"
-},
-{
-    "SubscriptionInfo": "Paid",
-    "CustomerInfo": "CustomerInfo 39",
-    "NextRenewal": "Adjustment",
-    "MRP": "336.00",
-    "Createdon": "2072-03-11T13:10:13.679Z",
-    "id": "39"
-},
-{
-    "SubscriptionInfo": "Paid",
-    "CustomerInfo": "CustomerInfo 39",
-    "NextRenewal": "Adjustment",
-    "MRP": "336.00",
-    "Createdon": "2072-03-11T13:10:13.679Z",
-    "id": "33"
-},
-{
-    "SubscriptionInfo": "Pending",
-    "CustomerInfo": "CustomerInfo 39",
-    "NextRenewal": "Adjustment",
-    "MRP": "336.00",
-    "Createdon": "2072-03-11T13:10:13.679Z",
-    "id": "36"
-}
-
-]
 
 
 function inv_Notes() {
+    let invNotes = [{
+        "SubscriptionInfo": "Pending",
+        "CustomerInfo": "CustomerInfo 38",
+        "NextRenewal": "Refundable",
+        "MRP": "202.00",
+        "Createdon": "2049-01-07T12:11:32.957Z",
+        "id": "38"
+    },
+    {
+        "SubscriptionInfo": "Paid",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336.00",
+        "Createdon": "2072-03-11T13:10:13.679Z",
+        "id": "39"
+    },
+    {
+        "SubscriptionInfo": "Paid",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336.00",
+        "Createdon": "2072-03-11T13:10:13.679Z",
+        "id": "33"
+    },
+    {
+        "SubscriptionInfo": "Pending",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336.00",
+        "Createdon": "2072-03-11T13:10:13.679Z",
+        "id": "36"
+    }
+
+    ]
+
     document.querySelector("#main").innerHTML = `
     <div id="sb_subs_1">
     <h3>All Invoice Details</h3>
@@ -1679,6 +1896,41 @@ function inv_Notes() {
 
 }
 function sort_inv() {
+    let invNotes = [{
+        "SubscriptionInfo": "Pending",
+        "CustomerInfo": "CustomerInfo 38",
+        "NextRenewal": "Refundable",
+        "MRP": "202.00",
+        "Createdon": "2049-01-07T12:11:32.957Z",
+        "id": "38"
+    },
+    {
+        "SubscriptionInfo": "Paid",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336.00",
+        "Createdon": "2072-03-11T13:10:13.679Z",
+        "id": "39"
+    },
+    {
+        "SubscriptionInfo": "Paid",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336.00",
+        "Createdon": "2072-03-11T13:10:13.679Z",
+        "id": "33"
+    },
+    {
+        "SubscriptionInfo": "Pending",
+        "CustomerInfo": "CustomerInfo 39",
+        "NextRenewal": "Adjustment",
+        "MRP": "336.00",
+        "Createdon": "2072-03-11T13:10:13.679Z",
+        "id": "36"
+    }
+
+    ]
+
     let x = document.querySelector("#sub_sort").value
     if (x == "L-H") {
         let lth = invNotes.sort((a, b) => {

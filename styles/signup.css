@@ -7,18 +7,21 @@
     "Segoe UI Symbol";
   /* margin-top: 1px; */
 }
+
 #signslideshow {
   height: auto;
   width: auto;
   display: flex;
   gap: 20px;
 }
-#signslideshow > div {
+
+#signslideshow>div {
   height: 580px;
   width: 425px;
   /* border: 1px solid black; */
 }
-#signslideshow > div + div {
+
+#signslideshow>div+div {
   /* border: 1px solid red; */
   width: 920px;
 }
@@ -26,6 +29,7 @@
 td:first-child {
   width: 10px;
 }
+
 #sign_head {
   display: flex;
   justify-content: space-evenly;
@@ -35,9 +39,11 @@ td:first-child {
   gap: 300px;
   margin-bottom: 30px;
 }
-#sign_head > div >a> img {
+
+#sign_head>div>a>img {
   height: 40px;
 }
+
 #styleTextArea {
   color: #00000a;
   font-size: 18px;
@@ -65,22 +71,23 @@ select {
   margin-bottom: 20px;
 }
 
-input[type="submit"] {
+#submit_but {
   width: 30%;
-  background-color: #4caf50;
+  background-color: #ff7846;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  filter: grayscale(100%);
-  opacity: 0.5;
+  /* filter: grayscale(100%);
+  opacity: 0.5; */
 }
 
-input[type="submit"]:hover {
-  background-color: blueviolet;
+#submit_but:hover {
+  background-color: #f46734;
 }
+
 #div {
   height: 400px;
   width: 80%;
@@ -88,6 +95,7 @@ input[type="submit"]:hover {
   border-radius: 5px;
   padding: 40px;
 }
+
 #companyNmae {
   color: #727272;
   font-size: 16px;
@@ -95,10 +103,12 @@ input[type="submit"]:hover {
   line-height: 20px;
   margin-bottom: 12px;
 }
+
 #bottomImagesign {
   margin-top: 20px;
   margin-left: 45%;
 }
+
 #borderstyle {
   width: 100px;
   height: 580px;
@@ -107,6 +117,7 @@ input[type="submit"]:hover {
   border: 1px solid #cdcdcd;
   border-radius: 1.5%;
 }
+
 #borderstyletetx {
   width: 300px;
   margin-top: -17px;
@@ -122,19 +133,23 @@ input[type="submit"]:hover {
   padding: 0 12px;
   margin-left: 10%;
 }
+
 #styelOfocheckbox {
   width: 500px;
   padding: 0;
   margin: auto;
 }
+
 #para1signa {
   margin-top: 10px;
   font-size: 15px;
   color: #7f7f7f;
 }
+
 #spancolor {
   color: black;
 }
+
 #para1signa2 {
   font-size: 13px;
   color: #7f7f7f;
@@ -143,16 +158,20 @@ input[type="submit"]:hover {
 .container {
   width: 100%;
 }
+
 .swiper {
   width: 100%;
   height: fit-content;
 }
+
 .swiper-slide img {
   width: 100%;
 }
+
 .swiper {
   color: rgb(104, 95, 95);
 }
+
 .swiper .swiper-pagination-bullet-active {
   /* margin-top: 200px; */
   border-radius: 0px;
@@ -160,7 +179,7 @@ input[type="submit"]:hover {
 }
 
 /* ------------------------------------------------------------ */
-#sign_head > div + div > a {
+#sign_head>div+div>a {
   margin-top: 20px;
   text-decoration: none;
 }

@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../styles/signup.css" />
-  <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png">
-  <title>Sign UP - Get Your Free Sandbox - Chargebee</title>
+  <!-- <link rel="icon" type="image/x-icon" href="https://www.chargebee.com/static/resources/brand/apple-touch-icon.png"> -->
+  <title>Sign UP - Get Your Free Sandbox - Chargify</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 </head>
@@ -51,18 +51,18 @@
         <div id="div">
           <form action="/action_page.php">
             <label id="companyNmae" for="fname">Work email</label><br /><br />
-            <input type="text" id="email" type="email" placeholder="(eg)john.m@company.com" />
+            <input type="text" id="email" type="email" placeholder="(eg)john.m@company.com" required/>
             <br />
             <label id="companyNmae" for="lname">Phone number</label><br /><br />
-            <input type="text" id="phone" type="number" placeholder="81234 56789" />
+            <input type="text" id="phone" type="number" placeholder="81234 56789" required />
             <br /><br />
             <p id="styelOfocheckbox">
               <input type="checkbox" required />
               <label for="c1">I want to be notified about the awesome happenings* at
-                Chargebee</label>
+                Chargify</label>
             </p>
             <br />
-            <input type="submit" value="Complete Signup " />
+            <input type="submit" value="Complete Signup " id="submit_but" />
             <br />
             <p id="para1signa">
               By clicking on Complete Signup, you agree to our <span id="spancolor">Terms</span> and you
@@ -122,6 +122,7 @@
     console.log(UserListData);
     // userArr.push(UserListData);
     localStorage.setItem("Company Details", JSON.stringify(UserListData));
+    localStorage.setItem("userData", JSON.stringify(UserListData));
     window.location.href = "../pages/Acc_SetUp.html";
   });
 </script>
