@@ -1,17 +1,15 @@
-* {
-  font-family: 'IBM Plex Sans', sans-serif;
+
+*{
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 
-#main_nav_tab {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  /* background-color: #000ff0; */
-  /* background-color: transparent; */
+#main_nav_tab{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
-
 
 .logo_box {
   /* border: 1px solid black; */
@@ -28,69 +26,46 @@
   width: 60%;
 }
 
-.navbar_tabs {
-  /* border: 1px soldi black; */
-  justify-content: space-around;
-  /* background-color: transparent; */
-  /* background-color: #000ff0; */
+.navbar_tabs{
+justify-content: space-around;
+
 
 
 }
 
 .navbar {
-  overflow: hidden;
-  background-color: transparent;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  /* border: 1px solid green; */
-  /* display: ; */
-  margin-left: -350px;
-  /* background-color: #000ff0; */
-
-}
-
-.navbar a {
-
-  float: left;
-  font-size: 16px;
-  color: rgb(26, 24, 24);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-  overflow: hidden;
-  /* background-color: transparent; */
-  /* background-color: #000ff0; */
+    overflow: hidden;
+    background-color: transparent;
+    margin-left: -350px;
 
 
-}
+  }
+
+  .navbar a {
+
+    float: left;
+    font-size: 16px;
+    color: rgb(26, 24, 24);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;    
+  }
 
 
 .dropdown .dropbtn {
   background-color: transparent;
-  /* background-color: #000ff0; */
-
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  /* color: rgb(11, 11, 11); */
-  padding: 24px 16px;
-  /* background-color: white; */
-  /* font: inherit; */
-  margin: 0;
-  /* border: 1px solid red; */
-}
-
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  /* background-color: red; */
-  /* border: 1px solid red; */
-}
-
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    padding: 24px 16px;
+    margin: 0;
+  }
 
 .dropdown-content {
   display: none;
@@ -98,14 +73,11 @@
   background-color: white;
   width: 100%;
   left: 0%;
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
   z-index: 1;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
-  /* background-color: #5a0606; */
-  /* color: white; */
 }
 
 .column {
@@ -113,44 +85,39 @@
   width: 12%;
   padding: 10px 25px;
   background-color: rgb(255, 255, 255);
-  /* height: 250px; */
-  /* padding-left: 20px; */
+
 }
 
-#column {
-  width: 8%;
-}
+  #column{
+    width: 8%;
+  }
+  #resource{
+    width: 22%;
+    /* padding: 2px 20px 10px 20px; */
+    margin-bottom: 25px;
+  }
 
-#resource {
-  width: 22%;
-  /* padding: 2px 20px 10px 20px; */
-  margin-bottom: 25px;
-}
-
-#resource p {
-  margin-bottom: 35px;
-}
-
-.column a {
-  float: none;
-  /* color: #000ff0;  */
-  padding: 5px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-  /* font-weight: bold; */
-}
-
-.column a:first-child {
+  #resource p{
+    margin-bottom: 35px;
+  }
+  .column a {
+    float: none;
+    /* color: #000ff0;  */
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    /* font-weight: bold; */
+  }
+.column a:first-child{
   font-weight: bold;
 }
-
-.column a:not(:first-child):hover {
-  color: #000ff0;
-  /* font-weight: bolder; */
-  margin-left: 3px;
-  /* background-color: rgb(112, 23, 23);inner color hover */
-}
+  .column a:not(:first-child):hover {
+    color: #000ff0;
+    /* font-weight: bolder; */
+    margin-left: 3px;
+    /* background-color: rgb(112, 23, 23);inner color hover */
+  }
 
 /* Clear floats after the columns */
 .row:after {
@@ -167,14 +134,14 @@
   justify-content: center;
   align-items: center;
   /* width: 300px; */
+  z-index: 11;
 }
 
-.action-btns>button {
+.action-btns > button {
   /* width: 100px; */
   margin: 0px 5px;
   /* border:1px solid #000ff0; */
   font-weight: bold;
-
 }
 
 #language,
@@ -183,7 +150,6 @@
   border: none;
   /* border:1px solid #000ff0; */
   cursor: pointer;
-
 }
 
 #demoBtn {
@@ -195,7 +161,8 @@
   height: 35px;
 }
 
-.column>p>a {
+
+.column > p > a {
   color: blue;
 }
 

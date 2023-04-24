@@ -324,8 +324,9 @@
 
 #middle_tab_section {
   /* border: 1px solid red; */
-  /* height:600px; */
-  /* margin-bottom: 155px; */
+background-color: #fff;
+  position: sticky;
+  top: 0;
 }
 
 #middle_nav_bar {
